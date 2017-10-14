@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import './Container.css'
+import '../../assets//Container.css'
 
 const Container = (props) => {
   const {

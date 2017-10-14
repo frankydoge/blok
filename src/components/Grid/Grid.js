@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import './Grid.css'
+import '../../assets/Grid.css'
 
 const Grid = (props) => {
   const {

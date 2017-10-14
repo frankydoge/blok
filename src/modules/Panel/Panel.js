@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import './Panel.css'
+import '../../assets//Panel.css'
 import { Container } from '../../import'
 
 const Panel = (props) => {
