@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/frankydoge/bolt#readme",
   "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
     "classnames": "^2.2.5",
     "react": "^16.0.0"
   }
