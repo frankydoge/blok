@@ -1,6 +1,6 @@
 {
   "name": "blok",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Quickly build basic React websites using Blok",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,8 @@
   "keywords": [
     "react",
     "javascript",
-    "blok"
+    "blok",
+    "frankydoge"
   ],
   "author": "Justin Martin",
   "license": "MIT",
