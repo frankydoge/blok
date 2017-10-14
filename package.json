@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/frankydoge/bolt#readme",
   "dependencies": {
-    "classnames": "^2.2.5"
+    "classnames": "^2.2.5",
+    "react": "^16.0.0"
   }
 }
