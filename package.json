@@ -1,7 +1,7 @@
 {
-  "name": "bolt",
+  "name": "blok",
   "version": "1.0.0",
-  "description": "Quickly build basic React websites using Bolt",
+  "description": "Quickly build basic React websites using Blok",
   "main": "index.js",
   "scripts": {
     "assets": "cp -R src/assets/ lib/assets/",
@@ -10,19 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/frankydoge/bolt.git"
+    "url": "git+https://github.com/frankydoge/blok.git"
   },
   "keywords": [
     "react",
     "javascript",
-    "bolt"
+    "blok"
   ],
   "author": "Justin Martin",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/frankydoge/bolt/issues"
+    "url": "https://github.com/frankydoge/blok/issues"
   },
-  "homepage": "https://github.com/frankydoge/bolt#readme",
+  "homepage": "https://github.com/frankydoge/blok#readme",
   "dependencies": {
     "babel-core": "^6.26.0",
     "babel-preset-latest": "^6.24.1",
