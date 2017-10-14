@@ -1,0 +1,27 @@
+{
+  "name": "bolt",
+  "version": "1.0.0",
+  "description": "Quickly build basic React websites using Bolt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frankydoge/bolt.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "bolt"
+  ],
+  "author": "Justin Martin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frankydoge/bolt/issues"
+  },
+  "homepage": "https://github.com/frankydoge/bolt#readme",
+  "dependencies": {
+    "classnames": "^2.2.5"
+  }
+}

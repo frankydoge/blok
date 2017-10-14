@@ -1,0 +1,49 @@
+.grid {
+  display: flex;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-col-1 {
+  width: 12.5%;
+  display: inline-block;
+}
+
+.grid-col-2 {
+  width: 25%;
+  display: inline-block;
+}
+
+.grid-col-3 {
+  width: 37.5%;
+  display: inline-block;
+}
+
+.grid-col-4 {
+  width: 50%;
+  display: inline-block;
+}
+
+.grid-col-5 {
+  width: 62.5%;
+  display: inline-block;
+}
+
+.grid-col-6 {
+  width: 75%;
+  display: inline-block;
+}
+
+.grid-col-7 {
+  width: 87.5%;
+  display: inline-block;
+}
+
+.grid-col-8 {
+  width: 100%;
+  display: inline-block;
+}

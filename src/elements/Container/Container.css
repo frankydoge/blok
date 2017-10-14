@@ -1,0 +1,25 @@
+.container {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.container-fluid {
+  display: inline-block;
+}
+
+.container-right {
+  text-align: right;
+}
+
+.container-middle {
+  text-align: center;
+}
+
+.container-left {
+  text-align: left;
+}
+
+.container-justified {
+  text-align: justify;
+}

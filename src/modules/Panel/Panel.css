@@ -1,0 +1,19 @@
+.panel {
+  background-color: red;
+}
+
+.panel-top {
+  height: 200px;
+  width: 100%;
+}
+
+.panel-left {
+  height: 100vh;
+  width: auto;
+  z-index: 1;
+  overflow-x: hidden;
+}
+
+.text {
+  padding: 10px;
+}
