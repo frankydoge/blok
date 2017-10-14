@@ -1,11 +1,11 @@
 // Modules
-import Panel from './src/modules/Panel/Panel'
+import Panel from './lib/modules/Panel/Panel'
 
 // Components
-import Grid from './src/components/Grid/Grid'
+import Grid from './lib/components/Grid/Grid'
 
 // Elements
-import Container from './src/elements/Container/Container'
+import Container from './lib/elements/Container/Container'
 
 export {
 // Modules
