@@ -1,17 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import '../../assets//Container.css'
+import '../../blok.css'
 
-const Container = (props) => {
+const Column = (props) => {
   const {
     textAlign,
     fluid
   } = props
   var containerClass = cx ({
-    'container': true,
-    [`container-${textAlign}`]: textAlign,
-    'container-fluid': fluid
+    'row': true,
+    [`text-align-${textAlign}`]: textAlign,
+    'display-fluid': fluid
   })
   return (
     <div className={containerClass} >
@@ -20,14 +20,14 @@ const Container = (props) => {
   )
 }
 
-Container.defaultProps = {
+Column.defaultProps = {
   textAlign: 'left',
   fluid: false
 }
 
-Container.propTypes = {
+Column.propTypes = {
   textAlign: PropTypes.string,
   fluid: PropTypes.bool
 }
 
-export default Container
+export default Column

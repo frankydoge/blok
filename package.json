@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/frankydoge/blok#readme",
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-react": "^6.24.1",
     "classnames": "^2.2.5",
     "react": "^16.0.0"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1"
   }
 }
