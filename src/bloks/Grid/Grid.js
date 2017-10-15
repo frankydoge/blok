@@ -6,6 +6,8 @@ import GridColumn from './GridColumn'
 import '../../blok.css'
 
 const Grid = (props) => {
+  Row: GridRow
+  Column: GridColumn
   var gridClass = cx ({
     'grid': true
   })
@@ -16,8 +18,4 @@ const Grid = (props) => {
   )
 }
 
-export {
-  Grid,
-  GridRow,
-  GridColumn
-}
+export default Grid
