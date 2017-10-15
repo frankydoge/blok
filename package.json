@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "assets": "cp -R src/*.css lib/",
-    "build": "rm -R lib/ && babel src -d lib",
+    "clean": "rm -R lib/",
+    "build": "babel src -d lib",
+    "complete": "npm run clean && npm run build && npm run assets",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
