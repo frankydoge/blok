@@ -1,8 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import '../../assets//Panel.css'
-import { Container } from '../../../index'
+import '../../blok.css'
 
 const Panel = (props) => {
   const {
@@ -14,12 +13,7 @@ const Panel = (props) => {
   })
   return (
     <div className={panelClass}>
-      <Container textAlign='middle'>
-        <h1>jmart.io</h1>
-      </Container>
-      <Container >
-        <p className='text'>Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum</p>
-      </Container>
+      
     </div>
   )
 }

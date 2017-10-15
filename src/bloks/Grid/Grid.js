@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import Row from './Row'
 import Column from './Column'
-import '../../assets/Grid.css'
+import '../../blok.css'
 
 const Grid = (props) => {
   var gridClass = cx ({
