@@ -1,19 +1,7 @@
-// Modules
-import Panel from './lib/modules/Panel/Panel'
-
-// Components
-import Grid from './lib/components/Grid/Grid'
-
-// Elements
-import Container from './lib/elements/Container/Container'
+import Grid from './lib/bloks/Grid/Grid'
+import Panel from './lib/bloks/Panel/Panel'
 
 export {
-// Modules
-  Panel,
-
-// Components
   Grid,
-
-// Elements  
-  Container
+  Panel
 }
