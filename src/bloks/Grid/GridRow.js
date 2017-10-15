@@ -3,31 +3,31 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
 
-const Column = (props) => {
+const GridRow = (props) => {
   const {
     textAlign,
     fluid
   } = props
-  var containerClass = cx ({
+  var rowClass = cx ({
     'row': true,
     [`text-align-${textAlign}`]: textAlign,
     'display-fluid': fluid
   })
   return (
-    <div className={containerClass} >
+    <div className={rowClass} >
       {props.children}
     </div>
   )
 }
 
-Column.defaultProps = {
+GridRow.defaultProps = {
   textAlign: 'left',
   fluid: false
 }
 
-Column.propTypes = {
+GridRow.propTypes = {
   textAlign: PropTypes.string,
   fluid: PropTypes.bool
 }
 
-export default Column
+export default GridRow

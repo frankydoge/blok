@@ -1,11 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Row from './Row'
-import Column from './Column'
+import GridRow from './GridRow'
+import GridColumn from './GridColumn'
 import '../../blok.css'
 
 const Grid = (props) => {
+  const Row = GridRow
+  const Column = GridColumn
   var gridClass = cx ({
     'grid': true
   })
