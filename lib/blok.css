@@ -1,0 +1,88 @@
+/*
+* Blok - 0.1.0
+* https://github.com/frankydoge/blok
+*
+* Copyright 2017, Justin Martin
+* Free to use under the MIT license
+* http://opensource.org/licenses/MIT
+*/
+
+/********
+
+-       GLOBAL
+
+********/
+
+/* DISPLAY */
+
+.display-fluid {
+  display: inline-block;
+}
+
+/* TEXT-ALIGN */
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-align-middle {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-justified {
+  text-align: justify;
+}
+
+/********
+
+-       BLOK's
+
+********/
+
+/***
+
+  GRID
+
+***/
+
+.grid {
+  width: 100%;
+  display: table;
+  border-collapse:separate;
+  border-spacing:15px;
+}
+
+.row {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  margin:0 0 -15px 0;
+}
+
+.column {
+  display: table-cell;
+  background: #e84485;
+  padding: 2%;
+}
+
+/***
+
+  PANEL
+
+***/
+
+.panel-top {
+  height: 200px;
+  width: 100%;
+}
+
+.panel-side {
+  height: 100vh;
+  width: auto;
+  z-index: 1;
+  overflow-x: hidden;
+}

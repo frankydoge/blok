@@ -4,7 +4,7 @@
   "description": "Quickly build basic React websites using Blok",
   "main": "index.js",
   "scripts": {
-    "assets": "cp -R src/assets/ lib/assets/",
+    "assets": "cp -R src/*.css lib/",
     "build": "babel src -d lib",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
