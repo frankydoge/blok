@@ -143,11 +143,11 @@
 }
 
 .link:hover {
-  color: #FFFFFF;
+  color: inherit;
   cursor: pointer;
 }
 
 .link-active {
-  color: #FFFFFF;
+  color: inherit;
   border-bottom: 2px solid #FFFFFF;
 }

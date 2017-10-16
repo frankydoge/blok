@@ -7,6 +7,7 @@ import '../../blok.css'
 const Link = (props) => {
   const {
     active,
+    color,
     font,
     ref,
     size,
@@ -14,6 +15,7 @@ const Link = (props) => {
   } = props
   var linkClass = cx ({
     'link': true,
+    [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
     'link-active': active
