@@ -52,21 +52,24 @@
 .container {
   width: 100%;
   display: table;
-  border-collapse:separate;
-  border-spacing:15px;
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+
+.container-compact {
+  border-collapse: collapse;
 }
 
 .row {
   width: 100%;
   display: table;
   table-layout: fixed;
-  margin:0 0 -15px 0;
+  margin: -15px 0;
 }
 
 .column {
   display: table-cell;
-  background: #e84485;
-  padding: 2%;
+  padding: 10px;
 }
 
 /***

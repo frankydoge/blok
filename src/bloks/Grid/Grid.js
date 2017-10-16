@@ -8,11 +8,12 @@ import '../../blok.css'
 
 const Grid = (props) => {
   const {
-    textAlign,
-    fluid
+    compact,
+    fluid,
+    textAlign
   } = props
   return (
-    <Container>
+    <Container compact={compact} >
       <Row textAlign={props.textAlign} fluid={props.fluid} >
         {props.children}
       </Row>
@@ -21,8 +22,9 @@ const Grid = (props) => {
 }
 
 Grid.propTypes = {
-  textAlign: PropTypes.string,
-  fluid: PropTypes.bool
+  compact: PropTypes.bool,
+  fluid: PropTypes.bool,
+  textAlign: PropTypes.string
 }
 
 export default Grid
