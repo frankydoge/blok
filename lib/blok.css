@@ -76,26 +76,31 @@
 .color-background-black {
   background-color: #000000;
   color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .color-background-white {
   background-color: #FFFFFF;
   color: #000000;
+  border-color: #000000;
 }
 
 .color-background-red {
   background-color: #DB4545;
   color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .color-background-green {
   background-color: #71B16E;
   color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 .color-background-blue {
   background-color: #0087BE;
   color: #FFFFFF;
+  border-color: #FFFFFF;
 }
 
 /* BOX-SHADOW */
