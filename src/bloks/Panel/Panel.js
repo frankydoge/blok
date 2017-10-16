@@ -6,9 +6,7 @@ import '../../blok.css'
 
 const Panel = (props) => {
   const {
-    heading,
-    linkText,
-    linkRef
+    heading
   } = props
   return (
     <Grid compact color='red'>
@@ -17,22 +15,18 @@ const Panel = (props) => {
       </Column>
       <Column />
       <Column textAlign='right'>
-        <a href={props.linkRef}>{props.linkText}</a>
+        {props.children}
       </Column>
     </Grid>
   )
 }
 
 Panel.propTypes = {
-  heading: PropTypes.string,
-  linkText: PropTypes.string,
-  linkRef: PropTypes.string
+  heading: PropTypes.string
 }
 
 Panel.defaultProps = {
-  heading: 'Title',
-  linkText: 'Link',
-  linkRef: '#'
+  heading: 'Title'
 }
 
 export default Panel
