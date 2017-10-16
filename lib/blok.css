@@ -54,6 +54,24 @@
   color: #FFFFFF;
 }
 
+/* LINK */
+
+a {
+  text-decoration: none;
+  color: #EDEDED;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+a:hover {
+  color: #EDEDED;
+}
+
+.active {
+  color: #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}
+
 /********
 
 -       BLOK's
