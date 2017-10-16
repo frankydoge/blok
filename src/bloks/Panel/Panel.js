@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Column, Grid } from '../../../index'
+import { Column, Grid, Heading } from '../../../index'
 import '../../blok.css'
 
 const Panel = (props) => {
@@ -10,9 +10,9 @@ const Panel = (props) => {
     heading
   } = props
   return (
-    <Grid compact color={color}>
+    <Grid compact color={color} hover>
       <Column textAlign='middle'>
-        <h1>{props.heading}</h1>
+        <Heading>{props.heading}</Heading>
       </Column>
       <Column />
       <Column textAlign='right'>

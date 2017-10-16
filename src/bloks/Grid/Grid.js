@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
+import Column from './Column'
 
 const Grid = (props) => {
 
@@ -50,5 +51,7 @@ Grid.defaultProps = {
   fluid: false,
   hover: false
 }
+
+Grid.Column = Column
 
 export default Grid

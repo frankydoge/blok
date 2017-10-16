@@ -129,11 +129,12 @@
 .link {
   text-decoration: none;
   color: #EDEDED;
-  padding: 25px;
+  padding: 15px 25px;
 }
 
 .link:hover {
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .link-active {

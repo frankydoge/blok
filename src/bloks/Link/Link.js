@@ -35,7 +35,7 @@ Link.defaultProps = {
   active: false,
   font: 'body',
   ref: '#',
-  size: 'regular',
+  size: 'small',
   text: 'Link Text'
 }
 
