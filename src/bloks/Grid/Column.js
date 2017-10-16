@@ -18,11 +18,11 @@ const Column = (props) => {
   )
 }
 
-Container.defaultProps = {
+Column.defaultProps = {
   color: 'blue'
 }
 
-Container.propTypes = {
+Column.propTypes = {
   color: PropTypes.string
 }
 
