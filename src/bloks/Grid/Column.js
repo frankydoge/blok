@@ -5,11 +5,13 @@ import '../../blok.css'
 
 const Column = (props) => {
   const {
-    color
+    color,
+    textAlign
   } = props
   var columnClass = cx ({
     'column': true,
-    [`color-background-${color}`]: color
+    [`color-background-${color}`]: color,
+    [`text-align-${textAlign}`]: textAlign
   })
   return (
     <div className={columnClass} >
@@ -18,12 +20,13 @@ const Column = (props) => {
   )
 }
 
-Column.defaultProps = {
-  color: 'blue'
+Column.propTypes = {
+  color: PropTypes.string,
+  textAlign: PropTypes.string
 }
 
-Column.propTypes = {
-  color: PropTypes.string
+Grid.defaultProps = {
+  textAlign: 'left'
 }
 
 export default Column
