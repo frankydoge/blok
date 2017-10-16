@@ -1,37 +1,33 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Column from './Column'
-import Container from './Container'
-import Row from './Row'
 import '../../blok.css'
 
-const Grid = (props) => {
+const Row = (props) => {
   const {
     textAlign,
     fluid
   } = props
   var rowClass = cx ({
+    'row': true,
     [`text-align-${textAlign}`]: textAlign,
     'display-fluid': fluid
   })
   return (
-    <Container>
-      <Row className={rowClass}>
-        {props.children}
-      </Row>
-    </Container>
+    <div className={rowClass} >
+      {props.children}
+    </div>
   )
 }
 
-Grid.defaultProps = {
+Row.defaultProps = {
   textAlign: 'left',
   fluid: false
 }
 
-Grid.propTypes = {
+Row.propTypes = {
   textAlign: PropTypes.string,
   fluid: PropTypes.bool
 }
 
-export default Grid
+export default Row
