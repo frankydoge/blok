@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import Column from './Column'
-import Container from './Container'
-import Row from './Row'
 import '../../blok.css'
 
 const Grid = (props) => {
