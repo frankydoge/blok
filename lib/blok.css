@@ -138,7 +138,7 @@
 
 .link {
   text-decoration: none;
-  color: #EDEDED;
+  color: #CCCCCC;
   padding: 15px 25px;
 }
 
@@ -149,5 +149,5 @@
 
 .link-active {
   color: inherit;
-  border-bottom: 2px solid #FFFFFF;
+  border-bottom: 2px solid inherit;
 }
