@@ -14,7 +14,7 @@ const Heading = (props) => {
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size
   })
-  const HeadingTag = `{props.tag}`;
+  const HeadingTag = `${props.tag}`;
   return (
     <HeadingTag className={headingClass}>
       {props.children}
