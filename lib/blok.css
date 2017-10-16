@@ -37,6 +37,23 @@
   text-align: justify;
 }
 
+/* COLOR-BACKGROUND */
+
+.color-background-blue {
+  background-color: #0087BE;
+  color: #FFFFFF;
+}
+
+.color-background-green {
+  background-color: #71B16E;
+  color: #FFFFFF;
+}
+
+.color-background-red {
+  background-color: #DB4545;
+  color: #FFFFFF;
+}
+
 /********
 
 -       BLOK's
@@ -64,7 +81,6 @@
   width: 100%;
   display: table;
   table-layout: fixed;
-  margin: -15px 0;
 }
 
 .column {
