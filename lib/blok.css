@@ -93,15 +93,3 @@
   PANEL
 
 ***/
-
-.panel-top {
-  height: 200px;
-  width: 100%;
-}
-
-.panel-side {
-  height: 100vh;
-  width: auto;
-  z-index: 1;
-  overflow-x: hidden;
-}
