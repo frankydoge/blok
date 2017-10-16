@@ -13,6 +13,40 @@
 
 ********/
 
+/* FONT-FAMILY */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+
+.font-family-heading {
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-family-body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* FONT-SIZE */
+
+.font-size-tiny {
+  font-size: 10px;
+}
+
+.font-size-small {
+  font-size: 20px;
+}
+
+.font-size-regular {
+  font-size: 25px;
+}
+
+.font-size-large {
+  font-size: 30px;
+}
+
+.font-size-huge {
+  font-size: 40px;
+}
+
 /* DISPLAY */
 
 .display-fluid {
@@ -54,27 +88,10 @@
   color: #FFFFFF;
 }
 
-/* HOVER */
+/* BOX-SHADOW */
 
-.hover {
+.box-shadow {
   box-shadow: 1px 1px 5px grey;
-}
-
-/* LINK */
-
-a {
-  text-decoration: none;
-  color: #EDEDED;
-  padding: 25px;
-}
-
-a:hover {
-  color: #FFFFFF;
-}
-
-.active {
-  color: #FFFFFF;
-  border-bottom: 2px solid #FFFFFF;
 }
 
 /********
@@ -83,11 +100,7 @@ a:hover {
 
 ********/
 
-/***
-
-  GRID
-
-***/
+/* GRID */
 
 .container {
   width: 100%;
@@ -111,8 +124,19 @@ a:hover {
   padding: 10px;
 }
 
-/***
+/* LINK */
 
-  PANEL
+.link {
+  text-decoration: none;
+  color: #EDEDED;
+  padding: 25px;
+}
 
-***/
+.link:hover {
+  color: #FFFFFF;
+}
+
+.link-active {
+  color: #FFFFFF;
+  border-bottom: 2px solid #FFFFFF;
+}

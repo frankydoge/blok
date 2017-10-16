@@ -6,19 +6,37 @@ import '../../blok.css'
 
 const Link = (props) => {
   const {
-    heading
+    active,
+    font,
+    ref,
+    size,
+    text
   } = props
+  var linkClass = cx ({
+    'link': true,
+    [`font-family-${font}`]: font,
+    [`font-size-${size}`]: size,
+    'link-active': active
+  })
   return (
-    <a href='#' className='active'>Blok</a>
+    <a href={ref} className={linkClass}>{text}</a>
   )
 }
 
 Link.propTypes = {
-  heading: PropTypes.string
+  active: PropTypes.bool,
+  font: PropTypes.string,
+  ref: PropTypes.string,
+  size: PropTypes.string,
+  text: PropTypes.string
 }
 
 Link.defaultProps = {
-  heading: 'Title'
+  active: false,
+  font: 'body',
+  ref: '#',
+  size: 'regular',
+  text: 'Link Text'
 }
 
 export default Link
