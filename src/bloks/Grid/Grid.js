@@ -11,22 +11,13 @@ const Grid = (props) => {
     textAlign,
     fluid
   } = props
-  var rowClass = cx ({
-    [`text-align-${textAlign}`]: textAlign,
-    'display-fluid': fluid
-  })
   return (
     <Container>
-      <Row className={rowClass}>
+      <Row textAlign={props.textAlign} fluid={props.fluid} >
         {props.children}
       </Row>
     </Container>
   )
-}
-
-Grid.defaultProps = {
-  textAlign: 'left',
-  fluid: false
 }
 
 Grid.propTypes = {
