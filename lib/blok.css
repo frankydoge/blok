@@ -154,5 +154,5 @@
 
 .link-active {
   color: inherit;
-  border-bottom: 2px solid inherit;
+  border-bottom: 2px solid;
 }
