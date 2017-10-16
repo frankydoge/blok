@@ -44,8 +44,7 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   compact: false,
-  fluid: false,
-  textAlign: 'left'
+  fluid: false
 }
 
 export default Grid

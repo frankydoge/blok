@@ -25,8 +25,4 @@ Column.propTypes = {
   textAlign: PropTypes.string
 }
 
-Column.defaultProps = {
-  textAlign: 'left'
-}
-
 export default Column
