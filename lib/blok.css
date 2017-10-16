@@ -73,8 +73,18 @@
 
 /* COLOR-BACKGROUND */
 
-.color-background-blue {
-  background-color: #0087BE;
+.color-background-black {
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
+.color-background-white {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.color-background-red {
+  background-color: #DB4545;
   color: #FFFFFF;
 }
 
@@ -83,8 +93,8 @@
   color: #FFFFFF;
 }
 
-.color-background-red {
-  background-color: #DB4545;
+.color-background-blue {
+  background-color: #0087BE;
   color: #FFFFFF;
 }
 

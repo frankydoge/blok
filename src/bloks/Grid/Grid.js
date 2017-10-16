@@ -20,7 +20,7 @@ const Grid = (props) => {
     'container': true,
     [`color-background-${color}`]: color,
     'container-compact': compact,
-    'hover': hover
+    'box-shadow': hover
   })
 
   // Class Name for Row

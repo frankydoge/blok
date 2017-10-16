@@ -12,7 +12,7 @@ const Panel = (props) => {
   return (
     <Grid compact color={color} hover>
       <Column textAlign='middle'>
-        <Heading>{props.heading}</Heading>
+        <Heading font='body'>{props.heading}</Heading>
       </Column>
       <Column />
       <Column textAlign='right'>
