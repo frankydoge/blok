@@ -6,26 +6,32 @@ import '../../blok.css'
 
 const Panel = (props) => {
   const {
+    color,
     heading
   } = props
   return (
-    <Grid compact color='red'>
-      <Column textAlign='middle'>
-        <h1>{props.heading}</h1>
-      </Column>
-      <Column />
-      <Column textAlign='right'>
-        {props.children}
-      </Column>
-    </Grid>
+    <div>
+      <Grid compact color={color}>
+        <Column textAlign='middle'>
+          <h1>{props.heading}</h1>
+        </Column>
+      </Grid>
+      <Grid compact color={color}>
+        <Column textAlign='middle'>
+          {props.children}
+        </Column>
+      </Grid>
+    </div>
   )
 }
 
 Panel.propTypes = {
+  color: PropTypes.string,
   heading: PropTypes.string
 }
 
 Panel.defaultProps = {
+  color: 'blue',
   heading: 'Title'
 }
 

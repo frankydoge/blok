@@ -54,17 +54,22 @@
   color: #FFFFFF;
 }
 
+/* HOVER */
+
+.hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
 /* LINK */
 
 a {
   text-decoration: none;
   color: #EDEDED;
-  padding: 20px;
-  margin-left: 20px;
+  padding: 25px;
 }
 
 a:hover {
-  color: #EDEDED;
+  color: #FFFFFF;
 }
 
 .active {

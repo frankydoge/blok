@@ -10,6 +10,7 @@ const Grid = (props) => {
     color,
     compact,
     fluid,
+    hover,
     textAlign
   } = props
 
@@ -17,7 +18,8 @@ const Grid = (props) => {
   var containerClass = cx ({
     'container': true,
     [`color-background-${color}`]: color,
-    'container-compact': compact
+    'container-compact': compact,
+    'hover': hover
   })
 
   // Class Name for Row
@@ -39,12 +41,14 @@ const Grid = (props) => {
 Grid.propTypes = {
   compact: PropTypes.bool,
   fluid: PropTypes.bool,
+  hover: PropTypes.bool,
   textAlign: PropTypes.string
 }
 
 Grid.defaultProps = {
   compact: false,
-  fluid: false
+  fluid: false,
+  hover: false
 }
 
 export default Grid
