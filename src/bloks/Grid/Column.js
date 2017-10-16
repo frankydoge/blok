@@ -25,7 +25,7 @@ Column.propTypes = {
   textAlign: PropTypes.string
 }
 
-Grid.defaultProps = {
+Column.defaultProps = {
   textAlign: 'left'
 }
 
