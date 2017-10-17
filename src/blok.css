@@ -121,6 +121,7 @@ html {
 .container {
   width: 100%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .container-raised {
@@ -135,10 +136,9 @@ html {
 } 
 
 .column {
-  float: left;
-  height: 100%; 
+  float: left; 
   width: 12.5%; 
-  padding: 1.2rem;
+  padding: 1rem;
 }
 
 .column-1 { width: 12.5%; }

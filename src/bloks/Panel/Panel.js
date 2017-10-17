@@ -22,7 +22,7 @@ const Panel = (props) => {
     <Grid color={color}>
       <Grid.Row>
         <Grid.Column width={2} textAlign='middle'>
-          <Heading font='body' text={props.heading} />
+          <Heading font='body' size='large' text={props.heading} />
         </Grid.Column>
         <Grid.Column width={6} textAlign='right'>
           {linkData}
