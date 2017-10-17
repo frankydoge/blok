@@ -1,20 +1,28 @@
 # blok
 
+**DISCLAIMER**
+
+This is currently in the early stages of development
+
 ### Getting Started
+---
 
 ```
 npm install --save blok
 ```
 
 ### Usage
+---
 
-##### Import
+#### Import
+---
 
 ```
 import { Component, Component2 } from 'blok'
 ```
 
-##### Grid
+#### Grid
+---
 
 **Grid**
 
@@ -58,7 +66,8 @@ import { Component, Component2 } from 'blok'
 </Grid>
 ```
 
-##### Heading
+#### Heading
+---
 
 **Heading**
 
@@ -74,7 +83,8 @@ import { Component, Component2 } from 'blok'
 <Heading font='body' text='Hello World' />
 ```
 
-##### Link
+#### Link
+---
 
 **Link**
 
@@ -92,7 +102,8 @@ import { Component, Component2 } from 'blok'
 <Link linkRef='www.website.com' text='Website' active />
 ```
 
-##### Panel
+#### Panel
+---
 
 **Panel**
 
