@@ -2,56 +2,40 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
-import Column from './Column'
+import { Column, Row } from '../../../index'
 
 const Grid = (props) => {
-
-  // Props
   const {
     color,
-    compact,
-    fluid,
-    hover,
+    font,
+    raised,
+    size,
     textAlign
   } = props
-
-  // Class Name for Container
-  var containerClass = cx ({
+  var gridClass = cx ({
     'container': true,
     [`color-background-${color}`]: color,
-    'container-compact': compact,
-    'box-shadow': hover
+    [`font-family-${font}`]: font,
+    'container-raised': raised,
+    [`font-size-${size}`]: size,
+    [`text-align-${textAlign}`]: textAlign
   })
-
-  // Class Name for Row
-  var rowClass = cx ({
-    'row': true,
-    [`text-align-${textAlign}`]: textAlign,
-    'display-fluid': fluid
-  })
-
   return (
-    <div className={containerClass} >
-      <div className={rowClass} >
-        {props.children}
-      </div>
+    <div className={gridClass} >
+      {props.children}
     </div>
   )
 }
 
 Grid.propTypes = {
-  compact: PropTypes.bool,
-  fluid: PropTypes.bool,
-  hover: PropTypes.bool,
+  color: PropTypes.string,
+  font: PropTypes.string,
+  raised: PropTypes.bool,
+  size: PropTypes.string,
   textAlign: PropTypes.string
 }
 
-Grid.defaultProps = {
-  compact: false,
-  fluid: false,
-  hover: false
-}
-
+Grid.Row = Row
 Grid.Column = Column
 
 export default Grid

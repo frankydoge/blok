@@ -13,6 +13,19 @@
 
 ********/
 
+/* BODY */
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
 /* FONT-FAMILY */
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
@@ -28,29 +41,23 @@
 /* FONT-SIZE */
 
 .font-size-tiny {
-  font-size: 10px;
+  font-size: 1rem;
 }
 
 .font-size-small {
-  font-size: 20px;
+  font-size: 2rem;
 }
 
 .font-size-regular {
-  font-size: 25px;
+  font-size: 3rem;
 }
 
 .font-size-large {
-  font-size: 30px;
+  font-size: 4rem;
 }
 
 .font-size-huge {
-  font-size: 40px;
-}
-
-/* DISPLAY */
-
-.display-fluid {
-  display: inline-block;
+  font-size: 5rem;
 }
 
 /* TEXT-ALIGN */
@@ -103,12 +110,6 @@
   border-color: #FFFFFF;
 }
 
-/* BOX-SHADOW */
-
-.box-shadow {
-  box-shadow: 1px 1px 5px grey;
-}
-
 /********
 
 -       BLOK's
@@ -119,32 +120,43 @@
 
 .container {
   width: 100%;
-  display: table;
-  border-collapse: separate;
-  border-spacing: 5px;
+  margin: 0 auto;
 }
 
-.container-compact {
-  border-collapse: collapse;
+.container-raised {
+  box-shadow: 0.1rem 0.1rem 0.5rem grey;
 }
 
-.row {
-  width: 100%;
-  display: table;
-  table-layout: fixed;
-}
+.row:before, 
+.row:after {
+  content:"";
+  display: table ;
+  clear:both;
+} 
 
 .column {
-  display: table-cell;
-  padding: 10px;
+  float: left;
+  min-height: 0.1rem; 
+  width: 12.5%; 
+  padding: 1.2rem; 
+  background-color: #FFDCDC;
 }
+
+.column-1 { width: 12.5%; }
+.column-2 { width: 25%; }
+.column-3 { width: 37.5%; }
+.column-4 { width: 50%; }
+.column-5 { width: 62.5%; }
+.column-6 { width: 75%; }
+.column-7 { width: 87.5%; }
+.column-8 { width: 100%; }
 
 /* LINK */
 
 .link {
   text-decoration: none;
   color: #CCCCCC;
-  padding: 15px 25px;
+  padding: 1.5rem 2.5rem;
 }
 
 .link:hover {
@@ -154,5 +166,5 @@
 
 .link-active {
   color: inherit;
-  border-bottom: 2px solid;
+  border-bottom: 0.2rem solid;
 }

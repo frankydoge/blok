@@ -3,35 +3,32 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
 
-const Column = (props) => {
+const Row = (props) => {
   const {
     color,
     font,
     size,
-    textAlign,
-    width
+    textAlign
   } = props
-  var columnClass = cx ({
-    'column': true,
+  var rowClass = cx ({
+    'row': true,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign,
-    [`column-${width}`]: width
+    [`text-align-${textAlign}`]: textAlign
   })
   return (
-    <div className={columnClass} >
+    <div className={rowClass} >
       {props.children}
     </div>
   )
 }
 
-Column.propTypes = {
+Row.propTypes = {
   color: PropTypes.string,
   font: PropTypes.string,
   size: PropTypes.string,
-  textAlign: PropTypes.string,
-  width: PropTypes.number
+  textAlign: PropTypes.string
 }
 
-export default Column
+export default Row

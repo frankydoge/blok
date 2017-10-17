@@ -8,7 +8,8 @@ const Heading = (props) => {
   const {
     font,
     size,
-    tag
+    tag,
+    text
   } = props
   var headingClass = cx ({
     [`font-family-${font}`]: font,
@@ -17,7 +18,7 @@ const Heading = (props) => {
   const HeadingTag = `${props.tag}`;
   return (
     <HeadingTag className={headingClass}>
-      {props.children}
+      {props.text}
     </HeadingTag>
   )
 }
@@ -25,12 +26,11 @@ const Heading = (props) => {
 Heading.propTypes = {
   font: PropTypes.string,
   size: PropTypes.string,
-  tag: PropTypes.string
+  tag: PropTypes.string,
+  text: PropTypes.string
 }
 
 Heading.defaultProps = {
-  font: 'heading',
-  size: 'large',
   tag: 'h1'
 }
 

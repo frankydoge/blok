@@ -8,8 +8,7 @@ const Panel = (props) => {
   const {
     color,
     heading,
-    link,
-    side
+    link
   } = props
   const linkData = link.map((data, key) =>
     <Link
@@ -19,53 +18,30 @@ const Panel = (props) => {
       active={data.active}
     />
   )
-  if (side === true) {
-    return (
-      <Grid compact color={color}>
-        <Grid.Column>
-          <Grid compact color={color}>
-            <Grid.Column textAlign='middle'>
-              <Heading font='body'>{props.heading}</Heading>
-            </Grid.Column>
-          </Grid>
-          <Grid compact color={color}>
-            <Grid.Column textAlign='right'>
-              {linkData}
-            </Grid.Column>
-          </Grid>
+  return (
+    <Grid color={color}>
+      <Grid.Row>
+        <Grid.Column width={2} textAlign='middle'>
+          <Heading font='body' text={heading} />
         </Grid.Column>
-        <Grid.Column>
-          {props.children}
-        </Grid.Column>
-      </Grid>
-    )
-  } else {
-    return (
-      <Grid compact color={color} hover>
-        <Grid.Column textAlign='middle'>
-          <Heading font='body'>{props.heading}</Heading>
-        </Grid.Column>
-        <Grid.Column />
-        <Grid.Column textAlign='right'>
+        <Grid.Column width={6} textAlign='right'>
           {linkData}
         </Grid.Column>
-      </Grid>
-    )
-  }
+      </Grid.Row>
+    </Grid>
+  )
 }
 
 Panel.propTypes = {
   color: PropTypes.string,
   heading: PropTypes.string,
-  link: PropTypes.array,
-  side: PropTypes.bool
+  link: PropTypes.array
 }
 
 Panel.defaultProps = {
-  color: 'blue',
+  color: 'white',
   heading: 'Title',
-  link: [{text: 'Link1', ref: '#', active: 'active'},{text: 'Link2', ref: '#'}],
-  side: false
+  link: [{text: 'Link1', ref: '#', active: 'active'}]
 }
 
 export default Panel
