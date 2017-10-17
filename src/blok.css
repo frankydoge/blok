@@ -178,6 +178,14 @@ html {
   height: 100vh;
 }
 
+.panel-side-left {
+  border-right: 0.2em solid;
+}
+
+.panel-side-right {
+  border-left: 0.2em solid;
+}
+
 .panel-side-left .heading {
   display: block;
   margin: 1em 0.5em;
