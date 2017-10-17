@@ -18,9 +18,9 @@ const Panel = (props) => {
     row = data.map((cell, key) =>
       <Link
         key={key}
-        text={row.text}
-        ref={row.ref}
-        active={row.active}
+        text={cell.text}
+        ref={cell.ref}
+        active={cell.active}
       />
     )
   )
