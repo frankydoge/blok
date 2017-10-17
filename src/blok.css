@@ -188,15 +188,24 @@ html {
   margin: 1em -0.5em;
 }
 
-.panel-side-left .link,
+.panel-side-left .link {
+  display: block;
+  margin: 0 -0.5em;
+}
+
 .panel-side-right .link {
   display: block;
   margin: 0 -0.5em;
 }
 
-.panel-side-left .link-active,
-.panel-side-right .link-active {
+.panel-side-left .link-active {
   margin: 0 -1em;
   border-right: 0.5em solid;
+  border-bottom: none;
+}
+
+.panel-side-right .link-active {
+  margin: 0 -1em;
+  border-left: 0.5em solid;
   border-bottom: none;
 }
