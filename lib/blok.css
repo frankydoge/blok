@@ -179,12 +179,10 @@ html {
 }
 
 .panel-side-left {
-  border-right: 0.1em solid;
   box-shadow: 0.2rem 0 0.5rem grey;
 }
 
 .panel-side-right {
-  border-left: 0.1em solid;
   box-shadow: -0.2rem 0 0.5rem grey;
 }
 
