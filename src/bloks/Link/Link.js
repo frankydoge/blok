@@ -9,7 +9,7 @@ const Link = (props) => {
     active,
     color,
     font,
-    ref,
+    linkRef,
     size,
     text
   } = props
@@ -21,14 +21,14 @@ const Link = (props) => {
     'link-active': active
   })
   return (
-    <a href={ref} className={linkClass}>{text}</a>
+    <a href={linkRef} className={linkClass}>{text}</a>
   )
 }
 
 Link.propTypes = {
   active: PropTypes.bool,
   font: PropTypes.string,
-  ref: PropTypes.string,
+  linkRef: PropTypes.string,
   size: PropTypes.string,
   text: PropTypes.string
 }
@@ -36,7 +36,7 @@ Link.propTypes = {
 Link.defaultProps = {
   active: false,
   font: 'body',
-  ref: '#',
+  linkRef: '#',
   size: 'small',
   text: 'Link Text'
 }

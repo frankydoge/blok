@@ -6,13 +6,10 @@ import '../../blok.css'
 
 const Panel = (props) => {
   const {
-    active,
     color,
     heading,
     link,
-    ref,
-    side,
-    text
+    side
   } = props
   const linkData = link.map((data, key) =>
     <Link
@@ -58,19 +55,16 @@ const Panel = (props) => {
 }
 
 Panel.propTypes = {
-  active: PropTypes.bool,
   color: PropTypes.string,
   heading: PropTypes.string,
   link: PropTypes.array,
-  side: PropTypes.bool,
-  text: PropTypes.string,
-  ref: PropTypes.string
+  side: PropTypes.bool
 }
 
 Panel.defaultProps = {
   color: 'blue',
   heading: 'Title',
-  link: "[[text: 'Link1', ref: '#'],[text: 'Link2', ref: '#']]",
+  link: [{text: 'Link1', ref: '#', active: 'active'},{text: 'Link2', ref: '#'}],
   side: false
 }
 
