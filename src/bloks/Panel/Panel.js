@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Column, Grid, Heading, Link } from '../../../index'
+import { Grid, Heading, Link } from '../../../index'
 import '../../blok.css'
 
 const Panel = (props) => {
@@ -11,40 +11,42 @@ const Panel = (props) => {
     link,
     side
   } = props
-  const linkData = link
-  const linkItems = linkData.map((linkData) =>
-    <Link ref={linkData.ref} text={linkData.text} active={linkData.active} />
-  )
+  const linkArr = link
+  const linkData = linkArr.map(rows => {
+    var row = rows.map(cell =>
+      <Link text={cell.text} ref={cell.ref} active={cell.active} />
+    )
+  })
   if (side === true) {
     return (
       <Grid compact color={color}>
-        <Column>
+        <Grid.Column>
           <Grid compact color={color}>
-            <Column textAlign='middle'>
+            <Grid.Column textAlign='middle'>
               <Heading font='body'>{props.heading}</Heading>
-            </Column>
+            </Grid.Column>
           </Grid>
           <Grid compact color={color}>
-            <Column textAlign='right'>
-              {linkItems}
-            </Column>
+            <Grid.Column textAlign='right'>
+              {linkData}
+            </Grid.Column>
           </Grid>
-        </Column>
-        <Column>
+        </Grid.Column>
+        <Grid.Column>
           {props.children}
-        </Column>
+        </Grid.Column>
       </Grid>
     )
   } else {
     return (
       <Grid compact color={color} hover>
-        <Column textAlign='middle'>
+        <Grid.Column textAlign='middle'>
           <Heading font='body'>{props.heading}</Heading>
-        </Column>
-        <Column />
-        <Column textAlign='right'>
-          {linkItems}
-        </Column>
+        </Grid.Column>
+        <Grid.Column />
+        <Grid.Column textAlign='right'>
+          {linkData}
+        </Grid.Column>
       </Grid>
     )
   }
@@ -60,7 +62,7 @@ Panel.propTypes = {
 Panel.defaultProps = {
   color: 'blue',
   heading: 'Title',
-  link: "[{text: 'Link', ref: '#'}]",
+  link: "[[text: 'Link1', ref: '#'],[text: 'Link2', ref: '#']]",
   side: false
 }
 
