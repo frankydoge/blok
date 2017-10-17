@@ -11,10 +11,11 @@ const Panel = (props) => {
     link,
     side
   } = props
+  const linkData = link
+  const linkItems = linkData.map((linkData) =>
+    <Link ref={link.ref} text={link.text} key={id} active={link.active} />
+  )
   if (side === true) {
-    const linkData = link.map((link, id) =>
-      <Link ref={link.ref} text={link.text} key={id} active={link.active} />
-    );
     return (
       <Grid compact color={color}>
         <Column>
@@ -25,7 +26,7 @@ const Panel = (props) => {
           </Grid>
           <Grid compact color={color}>
             <Column textAlign='right'>
-              {props.linkData}
+              {linkItems}
             </Column>
           </Grid>
         </Column>
@@ -35,9 +36,6 @@ const Panel = (props) => {
       </Grid>
     )
   } else {
-    const linkData = link.map((link, id) =>
-      <Link ref={link.ref} text={link.text} key={id} active={link.active} />
-    );
     return (
       <Grid compact color={color} hover>
         <Column textAlign='middle'>
@@ -45,7 +43,7 @@ const Panel = (props) => {
         </Column>
         <Column />
         <Column textAlign='right'>
-          {props.linkData}
+          {linkItems}
         </Column>
       </Grid>
     )
@@ -62,6 +60,7 @@ Panel.propTypes = {
 Panel.defaultProps = {
   color: 'blue',
   heading: 'Title',
+  link: "[{text: 'Link', ref: '#'}]",
   side: false
 }
 
