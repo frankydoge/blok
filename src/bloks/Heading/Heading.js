@@ -13,6 +13,7 @@ const Heading = (props) => {
     text
   } = props
   var headingClass = cx ({
+    [`${className}`]: className,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size
   })

@@ -13,6 +13,7 @@ const Row = (props) => {
   } = props
   var rowClass = cx ({
     'row': true,
+    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,

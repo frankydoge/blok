@@ -25,7 +25,7 @@ const Panel = (props) => {
         <Grid.Column width={2} textAlign='middle'>
           <Heading font='body' size='regular' text={props.heading} />
         </Grid.Column>
-        <Grid.Column width={6} textAlign='right' className='panel-top-nav'>
+        <Grid.Column width={6} textAlign='right' className={className}>
           {linkData}
         </Grid.Column>
       </Grid.Row>

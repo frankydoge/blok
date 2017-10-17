@@ -16,6 +16,7 @@ const Grid = (props) => {
   } = props
   var gridClass = cx ({
     'container': true,
+    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     'container-raised': raised,

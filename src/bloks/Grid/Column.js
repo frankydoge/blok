@@ -14,6 +14,7 @@ const Column = (props) => {
   } = props
   var columnClass = cx ({
     'column': true,
+    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
