@@ -7,6 +7,7 @@ import '../../blok.css'
 const Link = (props) => {
   const {
     active,
+    className,
     color,
     font,
     linkRef,
@@ -27,6 +28,7 @@ const Link = (props) => {
 
 Link.propTypes = {
   active: PropTypes.bool,
+  className: PropTypes.string,
   font: PropTypes.string,
   linkRef: PropTypes.string,
   size: PropTypes.string,

@@ -6,6 +6,7 @@ import '../../blok.css'
 
 const Panel = (props) => {
   const {
+    className,
     color,
     heading,
     link
@@ -36,6 +37,7 @@ const Panel = (props) => {
 }
 
 Panel.propTypes = {
+  className: PropTypes.string,
   color: PropTypes.string,
   heading: PropTypes.string,
   link: PropTypes.array

@@ -5,6 +5,7 @@ import '../../blok.css'
 
 const Column = (props) => {
   const {
+    className,
     color,
     font,
     size,
@@ -27,6 +28,7 @@ const Column = (props) => {
 }
 
 Column.propTypes = {
+  className: PropTypes.string,
   color: PropTypes.string,
   font: PropTypes.string,
   size: PropTypes.string,

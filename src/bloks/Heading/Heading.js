@@ -6,6 +6,7 @@ import '../../blok.css'
 
 const Heading = (props) => {
   const {
+    className,
     font,
     size,
     tag,
@@ -24,6 +25,7 @@ const Heading = (props) => {
 }
 
 Heading.propTypes = {
+  className: PropTypes.string,
   font: PropTypes.string,
   size: PropTypes.string,
   tag: PropTypes.string,

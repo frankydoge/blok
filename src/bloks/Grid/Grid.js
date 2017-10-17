@@ -7,6 +7,7 @@ import Row from './Row'
 
 const Grid = (props) => {
   const {
+    className,
     color,
     font,
     raised,
@@ -29,6 +30,7 @@ const Grid = (props) => {
 }
 
 Grid.propTypes = {
+  className: PropTypes.string,
   color: PropTypes.string,
   font: PropTypes.string,
   raised: PropTypes.bool,
