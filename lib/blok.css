@@ -181,10 +181,12 @@ html {
 .panel-side-left .link,
 .panel-side-right .link {
   display: block;
+  margin: 0 -0.5em;
 }
 
 .panel-side-left .link-active,
 .panel-side-right .link-active {
   margin: 0 -1em;
   border-right: 0.2em solid;
+  border-bottom: none;
 }

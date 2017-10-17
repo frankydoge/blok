@@ -45,10 +45,10 @@ const Panel = (props) => {
     return (
       <Grid>
         <Grid.Row>
-          <Grid.Column width={6}>
+          <Grid.Column width={7}>
             {props.children}
           </Grid.Column>
-          <Grid.Column width={2} textAlign='middle' color={color} className={panelSideClass}>
+          <Grid.Column width={1} textAlign='middle' color={color} className={panelSideClass}>
             <Grid>
               <Grid.Row>
                 <Grid.Column width={8}>
@@ -69,10 +69,10 @@ const Panel = (props) => {
     return (
       <Grid>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' color={color} className={panelSideClass}>
+          <Grid.Column width={1} textAlign='middle' color={color} className={panelSideClass}>
             <Grid>
               <Grid.Row>
-                <Grid.Column width={8}>
+                <Grid.Column width={7}>
                   <Heading font='body' size='regular' text={props.heading} />
                 </Grid.Column>
               </Grid.Row>
