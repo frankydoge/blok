@@ -14,15 +14,13 @@ const Panel = (props) => {
     side,
     text
   } = props
-  const linkData = link.map((data) =>
-    row = data.map((cell, key) =>
-      <Link
-        key={key}
-        text={cell.text}
-        ref={cell.ref}
-        active={cell.active}
-      />
-    )
+  const linkData = link.map((data, key) =>
+    <Link
+      key={key}
+      text={data.text}
+      ref={data.ref}
+      active={data.active}
+    />
   )
   if (side === true) {
     return (
