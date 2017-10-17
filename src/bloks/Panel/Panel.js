@@ -13,7 +13,7 @@ const Panel = (props) => {
   } = props
   const linkData = link
   const linkItems = linkData.map((linkData) =>
-    <Link ref={link.ref} text={link.text} key={id} active={link.active} />
+    <Link ref={linkData.ref} text={linkData.text} active={linkData.active} />
   )
   if (side === true) {
     return (
