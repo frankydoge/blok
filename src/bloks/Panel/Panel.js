@@ -40,25 +40,45 @@ const Panel = (props) => {
     )
   } else if (side === 'right') {
     return (
-      <Grid color={color}>
+      <Grid>
         <Grid.Row>
           <Grid.Column width={6}>
             {props.children}
           </Grid.Column>
-          <Grid.Column width={2} textAlign='middle'>
-            <Heading font='body' size='regular' text={props.heading} />
-            {linkData}
+          <Grid.Column width={2} textAlign='middle' color={color}>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  <Heading font='body' size='regular' text={props.heading} />
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  {linkData}
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Grid.Column>
         </Grid.Row>
       </Grid>
     )
   } else {
     return (
-      <Grid color={color}>
+      <Grid>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle'>
-            <Heading font='body' size='regular' text={props.heading} />
-            {linkData}
+          <Grid.Column width={2} textAlign='middle' color={color}>
+            <Grid>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  <Heading font='body' size='regular' text={props.heading} />
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column width={8}>
+                  {linkData}
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Grid.Column>
           <Grid.Column width={6}>
             {props.children}
