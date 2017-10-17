@@ -121,7 +121,6 @@ html {
 .container {
   width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 }
 
 .container-raised {
@@ -177,4 +176,15 @@ html {
 .panel-side-left,
 .panel-side-right {
   height: 100vh;
+}
+
+.panel-side-left .link,
+.panel-side-right .link {
+  display: block;
+}
+
+.panel-side-left .link-active,
+.panel-side-right .link-active {
+  margin: 0 -1em;
+  border-right: 0.2em solid;
 }

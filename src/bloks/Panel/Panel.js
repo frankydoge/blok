@@ -12,7 +12,11 @@ const Panel = (props) => {
     link,
     side
   } = props
-  var panelClass = cx ({
+  var panelTopClass = cx ({
+    [`${className}`]: className,
+    [`panel-side-${side}`]: side
+  })
+  var panelSideClass = cx ({
     [`${className}`]: className,
     [`panel-side-${side}`]: side
   })
@@ -31,7 +35,7 @@ const Panel = (props) => {
           <Grid.Column width={2} textAlign='middle'>
             <Heading font='body' size='regular' text={props.heading} />
           </Grid.Column>
-          <Grid.Column width={6} textAlign='right' className={panelClass}>
+          <Grid.Column width={6} textAlign='right' className={panelTopClass}>
             {linkData}
           </Grid.Column>
         </Grid.Row>
@@ -44,7 +48,7 @@ const Panel = (props) => {
           <Grid.Column width={6}>
             {props.children}
           </Grid.Column>
-          <Grid.Column width={2} textAlign='middle' color={color} className={panelClass}>
+          <Grid.Column width={2} textAlign='middle' color={color} className={panelSideClass}>
             <Grid>
               <Grid.Row>
                 <Grid.Column width={8}>
@@ -65,7 +69,7 @@ const Panel = (props) => {
     return (
       <Grid>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' color={color} className={panelClass}>
+          <Grid.Column width={2} textAlign='middle' color={color} className={panelSideClass}>
             <Grid>
               <Grid.Row>
                 <Grid.Column width={8}>
