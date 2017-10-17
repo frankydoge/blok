@@ -11,11 +11,13 @@ const Panel = (props) => {
     link,
     side
   } = props
-  const linkArr = link
-  const linkData = linkArr.map(rows => {
-    var row = rows.map(cell =>
-      <Link text={cell.text} ref={cell.ref} active={cell.active} />
-    )
+  const linkData = link.maps((link, key) => {
+    <Link
+      key={key}
+      text={link.text}
+      ref={link.text}
+      active={link.active}
+    />
   })
   if (side === true) {
     return (
@@ -55,7 +57,7 @@ const Panel = (props) => {
 Panel.propTypes = {
   color: PropTypes.string,
   heading: PropTypes.string,
-  link: PropTypes.object,
+  link: PropTypes.array,
   side: PropTypes.bool
 }
 
