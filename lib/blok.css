@@ -173,3 +173,8 @@ html {
 .panel-top-nav {
   margin-top: 2.5em;
 }
+
+.panel-side-left,
+.panel-side-right {
+  height: 100vh;
+}

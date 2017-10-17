@@ -14,7 +14,8 @@ const Panel = (props) => {
   } = props
   var panelClass = cx ({
     'panel-top-nav': true,
-    [`${className}`]: className
+    [`${className}`]: className,
+    [`panel-side-${side}`]: side
   })
   const linkData = link.map((data, key) =>
     <Link
@@ -39,7 +40,7 @@ const Panel = (props) => {
     )
   } else if (side === 'right') {
     return (
-      <Grid color={color} raised>
+      <Grid color={color}>
         <Grid.Row>
           <Grid.Column width={6}>
             {props.children}
@@ -53,7 +54,7 @@ const Panel = (props) => {
     )
   } else {
     return (
-      <Grid color={color} raised>
+      <Grid color={color}>
         <Grid.Row>
           <Grid.Column width={2} textAlign='middle'>
             <Heading font='body' size='regular' text={props.heading} />
