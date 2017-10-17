@@ -11,14 +11,14 @@ const Panel = (props) => {
     link,
     side
   } = props
-  const linkData = link.maps((link, key) => {
+  const linkData = link.map((data, key) =>
     <Link
       key={key}
-      text={link.text}
-      ref={link.text}
+      text={data.text}
+      ref={data.ref}
       active={link.active}
     />
-  })
+  )
   if (side === true) {
     return (
       <Grid compact color={color}>
