@@ -15,7 +15,7 @@ const Panel = (props) => {
     <Link
       key={key}
       text={data.text}
-      ref={data.ref}
+      linkRef={data.linkRef}
       active={data.active}
     />
   )
