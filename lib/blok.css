@@ -187,6 +187,6 @@ html {
 .panel-side-left .link-active,
 .panel-side-right .link-active {
   margin: 0 -1em;
-  border-right: 0.2em solid;
+  border-right: 0.5em solid;
   border-bottom: none;
 }

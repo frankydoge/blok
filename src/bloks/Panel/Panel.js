@@ -56,7 +56,7 @@ const Panel = (props) => {
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row>
-                <Grid.Column width={8}>
+                <Grid.Column width={8} textAlign='left'>
                   {linkData}
                 </Grid.Column>
               </Grid.Row>
@@ -77,7 +77,7 @@ const Panel = (props) => {
                 </Grid.Column>
               </Grid.Row>
               <Grid.Row>
-                <Grid.Column width={8}>
+                <Grid.Column width={8} textAlign='right'>
                   {linkData}
                 </Grid.Column>
               </Grid.Row>
