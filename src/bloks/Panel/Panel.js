@@ -12,8 +12,7 @@ const Panel = (props) => {
     link,
     side
   } = props
-  var panelClass = cx ({
-    'panel-top-nav': true,
+  var paneClass = cx ({
     [`${className}`]: className,
     [`panel-side-${side}`]: side
   })
@@ -45,7 +44,7 @@ const Panel = (props) => {
           <Grid.Column width={6}>
             {props.children}
           </Grid.Column>
-          <Grid.Column width={2} textAlign='middle' color={color}>
+          <Grid.Column width={2} textAlign='middle' color={color} className={panelClass}>
             <Grid>
               <Grid.Row>
                 <Grid.Column width={8}>
@@ -66,7 +65,7 @@ const Panel = (props) => {
     return (
       <Grid>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' color={color}>
+          <Grid.Column width={2} textAlign='middle' color={color} className={panelClass}>
             <Grid>
               <Grid.Row>
                 <Grid.Column width={8}>
