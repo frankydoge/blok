@@ -167,3 +167,9 @@ html {
   color: inherit;
   border-bottom: 0.2rem solid;
 }
+
+/* PANEL */
+
+.panel-top-nav {
+  margin-top: 2.5em;
+}

@@ -10,6 +10,9 @@ const Panel = (props) => {
     heading,
     link
   } = props
+  var panelClass = cx ({
+    'panel-top-nav': true
+  })
   const linkData = link.map((data, key) =>
     <Link
       key={key}
@@ -22,9 +25,9 @@ const Panel = (props) => {
     <Grid color={color}>
       <Grid.Row>
         <Grid.Column width={2} textAlign='middle'>
-          <Heading font='body' size='large' text={props.heading} />
+          <Heading font='body' size='regular' text={props.heading} />
         </Grid.Column>
-        <Grid.Column width={6} textAlign='right'>
+        <Grid.Column width={6} textAlign='right' className={panelClass}>
           {linkData}
         </Grid.Column>
       </Grid.Row>
