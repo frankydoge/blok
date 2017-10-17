@@ -1,7 +1,5 @@
 // GRID
 export { default as Grid } from './lib/bloks/Grid/Grid'
-export { default as Row } from './lib/bloks/Grid/Row'
-export { default as Column } from './lib/bloks/Grid/Column'
 
 // HEADING
 export { default as Heading } from './lib/bloks/Heading/Heading'
