@@ -12,7 +12,7 @@ const Panel = (props) => {
     link,
     side
   } = props
-  var paneClass = cx ({
+  var panelClass = cx ({
     [`${className}`]: className,
     [`panel-side-${side}`]: side
   })
