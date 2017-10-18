@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { Grid, Heading, Link } from '../../../index'
+import PanelPage from './PanelPage'
 import '../../blok.css'
 
 const Panel = (props) => {
@@ -106,5 +107,7 @@ Panel.defaultProps = {
   link: [{text: 'Link1', ref: '#', active: 'active'}],
   side: 'top'
 }
+
+Panel.Page = PanelPage
 
 export default Panel
