@@ -33,4 +33,8 @@ PanelPage.propTypes = {
   link: PropTypes.array
 }
 
+Panel.defaultProps = {
+  link: [{text: 'Link1', ref: '#', active: 'active'}]
+}
+
 export default PanelPage
