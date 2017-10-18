@@ -31,7 +31,7 @@ const Panel = (props) => {
   )
   if (side === 'top') {
     return (
-      <Grid color={color} raised>
+      <Grid color={color} raised id='panelPageId'>
         <Grid.Row>
           <Grid.Column width={2} textAlign='middle'>
             <Heading font='body' size='regular' text={props.heading} />

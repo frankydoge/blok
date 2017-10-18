@@ -21,7 +21,7 @@ const PanelPage = (props) => {
       active={data.active}
     />
   )
-  var offsetHeight = document.getElementById('myDiv').offsetHeight;
+  var offsetHeight = document.getElementById('panelPageId').offsetHeight;
   console.log(offsetHeight)
   return (
     <Heading text='Hi' />
@@ -33,7 +33,7 @@ PanelPage.propTypes = {
   link: PropTypes.array
 }
 
-Panel.defaultProps = {
+PanelPage.defaultProps = {
   link: [{text: 'Link1', ref: '#', active: 'active'}]
 }
 
