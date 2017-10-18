@@ -10,6 +10,7 @@ const Grid = (props) => {
     className,
     color,
     font,
+    id,
     raised,
     size,
     textAlign
@@ -34,6 +35,7 @@ Grid.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   font: PropTypes.string,
+  id: PropTypes.string,
   raised: PropTypes.bool,
   size: PropTypes.string,
   textAlign: PropTypes.string
