@@ -25,7 +25,7 @@ const Grid = (props) => {
     [`text-align-${textAlign}`]: textAlign
   })
   return (
-    <div className={gridClass} id={id} >
+    <div className={gridClass} id={props.id} >
       {props.children}
     </div>
   )
