@@ -41,15 +41,13 @@ Panel.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   heading: PropTypes.string,
-  link: PropTypes.array,
-  side: PropTypes.string
+  link: PropTypes.array
 }
 
 Panel.defaultProps = {
   color: 'white',
   heading: 'Title',
-  link: [{text: 'Link1', linkRef: '#', active: 'active'}],
-  side: 'top'
+  link: [{text: 'Link1', linkRef: '#', active: 'active'}]
 }
 
 export default Panel

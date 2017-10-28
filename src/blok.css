@@ -151,7 +151,7 @@ body {
 /* HEADER */
 
 .blok-header {
-  margin-top: 2.5em;
+  margin-top: 0.7rem;
 }
 
 /*** 
@@ -217,12 +217,18 @@ body {
   .column-8 { width: 100%; }
 }
 
+/* HEADING */
+
+.heading {
+  margin: 0;
+}
+
 /* LINK */
 
 .link {
   text-decoration: none;
   color: #CCCCCC;
-  padding: 1.5rem 2.5rem;
+  padding: 0rem 2.5rem;
 }
 
 .link:hover {
@@ -232,7 +238,6 @@ body {
 
 .link-active {
   color: inherit;
-  border-bottom: 0.2rem solid;
 }
 
 /********** 

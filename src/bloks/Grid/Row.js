@@ -20,7 +20,7 @@ const Row = (props) => {
     [`text-align-${textAlign}`]: textAlign
   })
   return (
-    <div className={rowClass} >
+    <div className={rowClass}>
       {props.children}
     </div>
   )
