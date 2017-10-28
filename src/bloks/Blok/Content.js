@@ -31,7 +31,8 @@ const Content = (props) => {
         <Grid.Column width={1} />
         <Grid.Column width={6} textAlign='middle'>
           <Heading font='body' size='huge' text={props.heading} className={blokContentHeadingClass} />
-          <Heading font='body' size='regular' text={props.kicker} className={blokContentKickerClass} />
+          <Heading font='body' size='small' text={props.kicker} className={blokContentKickerClass} />
+          <Line />
           <Heading font='body' size='small' textAlign='left' text={props.description} className={blokContentDescClass} />
         </Grid.Column>
         <Grid.Column width={1} />
