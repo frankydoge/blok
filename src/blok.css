@@ -7,9 +7,32 @@
 * http://opensource.org/licenses/MIT
 */
 
+/***********
+
+  CONTENTS
+------------
+
+- Global
+  - Body
+  - Font-Family
+  - Font-Size
+  - Text-Align
+  - Color-Background
+
+- Bloks
+  - Blok
+    - Header
+  - Grid
+    - Container
+    - Row
+    - Column
+  - Link
+
+***********/
+
 /********
 
--       GLOBAL
+  GLOBAL
 
 ********/
 
@@ -117,11 +140,30 @@ body {
 
 /********
 
--       BLOK's
+  BLOKS
 
 ********/
 
-/* GRID */
+/*** 
+  BLOK
+***/
+
+/* HEADER */
+
+.panel-side-top {
+  margin-top: 2.5em;
+}
+
+.panel-side-left,
+.panel-side-right {
+  height: 100vh;
+}
+
+/*** 
+  GRID
+***/
+
+/* CONTAINER */
 
 .container {
   width: 100%;
@@ -132,12 +174,16 @@ body {
   box-shadow: 0 0.2rem 0.5rem grey;
 }
 
+/* ROW */
+
 .row:before, 
 .row:after {
   content:"";
   display: table ;
   clear:both;
 } 
+
+/* COLUMN */
 
 .column {
   float: left; 
@@ -194,16 +240,12 @@ body {
   border-bottom: 0.2rem solid;
 }
 
-/* PANEL */
-
-.panel-side-top {
-  margin-top: 2.5em;
-}
-
-.panel-side-left,
-.panel-side-right {
-  height: 100vh;
-}
+/********** 
+*
+*   This will be added back in when side-panels are introduced
+*   but have removed this from the Blok.Header
+*
+***********
 
 .panel-side-left {
   box-shadow: 0.2rem 0 0.5rem grey;
@@ -242,3 +284,5 @@ body {
 .panel-side-right .link-active {
   border-left: 0.5em solid;
 }
+
+*/
