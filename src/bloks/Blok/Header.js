@@ -12,8 +12,10 @@ const Panel = (props) => {
     link
   } = props
   var blokHeaderClass = cx ({
-    [`blok-header`]: true,
     [`${className}`]: className
+  })
+  var blokHeaderLinkClass = cx ({
+    [`blok-header-link`]: true
   })
   const linkData = link.map((data, key) =>
     <Link
@@ -24,12 +26,12 @@ const Panel = (props) => {
     />
   )
   return (
-    <Grid color={color} raised>
+    <Grid color={color} raised className={blokHeaderClass}>
       <Grid.Row>
         <Grid.Column width={2} textAlign='middle'>
           <Heading font='body' size='regular' text={props.heading} />
         </Grid.Column>
-        <Grid.Column width={6} textAlign='right' className={blokHeaderClass}>
+        <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
           {linkData}
         </Grid.Column>
       </Grid.Row>
