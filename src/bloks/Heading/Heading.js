@@ -10,13 +10,15 @@ const Heading = (props) => {
     font,
     size,
     tag,
-    text
+    text,
+    textAlign
   } = props
   var headingClass = cx ({
     'heading': true,
     [`${className}`]: className,
     [`font-family-${font}`]: font,
-    [`font-size-${size}`]: size
+    [`font-size-${size}`]: size,
+    [`text-align-${textAlign}`]: textAlign
   })
   const HeadingTag = `${props.tag}`;
   return (

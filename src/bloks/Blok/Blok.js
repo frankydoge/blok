@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
+import Content from './Content'
 import Header from './Header'
 
 const Blok = (props) => {
@@ -12,6 +13,7 @@ const Blok = (props) => {
   )
 }
 
+Blok.Content = Content
 Blok.Header = Header
 
 export default Blok

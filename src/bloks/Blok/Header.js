@@ -4,15 +4,14 @@ import cx from 'classnames'
 import { Grid, Heading, Link } from '../../../index'
 import '../../blok.css'
 
-const Panel = (props) => {
+const Header = (props) => {
   const {
-    className,
     color,
     heading,
     link
   } = props
   var blokHeaderClass = cx ({
-    [`${className}`]: className
+    [`blok-header`]: true
   })
   var blokHeaderLinkClass = cx ({
     [`blok-header-link`]: true
@@ -39,17 +38,16 @@ const Panel = (props) => {
   )
 }
 
-Panel.propTypes = {
-  className: PropTypes.string,
+Header.propTypes = {
   color: PropTypes.string,
   heading: PropTypes.string,
   link: PropTypes.array
 }
 
-Panel.defaultProps = {
+Header.defaultProps = {
   color: 'white',
   heading: 'Title',
   link: [{text: 'Link1', linkRef: '#', active: 'active'}]
 }
 
-export default Panel
+export default Header

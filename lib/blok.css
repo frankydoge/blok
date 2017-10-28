@@ -13,7 +13,7 @@
 ------------
 
 - Global
-  - Body
+  - Base
   - Font-Family
   - Font-Size
   - Text-Align
@@ -26,6 +26,8 @@
     - Container
     - Row
     - Column
+  - Heading
+  - Line
   - Link
 
 ***********/
@@ -36,7 +38,7 @@
 
 ********/
 
-/* BODY */
+/* BASE */
 
 html {
   font-size: 62.5%;
@@ -145,22 +147,6 @@ body {
 ********/
 
 /*** 
-  BLOK
-***/
-
-/* HEADER */
-
-.blok-header-link {
-  margin-top: 0.7rem;
-}
-
-@media all and (max-width: 750px) {
-  .blok-header-link {
-    text-align: center;
-  }
-}
-
-/*** 
   GRID
 ***/
 
@@ -201,7 +187,7 @@ body {
 .column-7 { width: 87.5%; }
 .column-8 { width: 100%; }
 
-@media all and (max-width: 750px) {
+@media all and (max-width: 900px) {
   .column-1 { width: 50%; }
   .column-2 { width: 100%; }
   .column-3 { width: 100%; }
@@ -216,6 +202,15 @@ body {
 
 .heading {
   margin: 0;
+}
+
+/* LINE */
+
+.line {
+  height: 0.1rem;
+  width: 90%;
+  margin: 2rem auto;
+  background-color: #000000;
 }
 
 /* LINK */
@@ -233,6 +228,48 @@ body {
 
 .link-active {
   color: inherit;
+}
+
+/*** 
+  BLOK
+***/
+
+/* CONTENT */
+
+.blok-content-padded {
+  padding-top: 7rem;
+}
+
+.blok-content-heading {
+  padding-top: 3rem;
+}
+
+.blok-content-kicker {
+  padding-top: 1.5rem;
+  width: 75%;
+  margin: 0 auto;
+}
+
+.blok-content-description {
+  width: 90%;
+  margin: 0 auto;
+  padding: 3rem 0.5rem 0 0.5rem;
+}
+
+/* HEADER */
+
+.blok-header {
+  position: fixed;
+}
+
+.blok-header-link {
+  margin-top: 0.7rem;
+}
+
+@media all and (max-width: 900px) {
+  .blok-header-link {
+    text-align: center;
+  }
 }
 
 /********** 
