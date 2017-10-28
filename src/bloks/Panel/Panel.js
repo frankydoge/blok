@@ -104,7 +104,7 @@ Panel.propTypes = {
 Panel.defaultProps = {
   color: 'white',
   heading: 'Title',
-  link: [{text: 'Link1', ref: '#', active: 'active'}],
+  link: [{text: 'Link1', linkRef: '#', active: 'active'}],
   side: 'top'
 }
 
