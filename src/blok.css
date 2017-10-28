@@ -150,13 +150,8 @@ body {
 
 /* HEADER */
 
-.panel-side-top {
+.blok-header {
   margin-top: 2.5em;
-}
-
-.panel-side-left,
-.panel-side-right {
-  height: 100vh;
 }
 
 /*** 
@@ -246,6 +241,11 @@ body {
 *   but have removed this from the Blok.Header
 *
 ***********
+
+.panel-side-left,
+.panel-side-right {
+  height: 100vh;
+}
 
 .panel-side-left {
   box-shadow: 0.2rem 0 0.5rem grey;
