@@ -21,11 +21,6 @@ const PanelPage = (props) => {
       active={data.active}
     />
   )
-  var offsetHeight = document.getElementById('panelPageId').offsetHeight;
-  console.log(offsetHeight)
-  return (
-    <Heading text='Hi' />
-  )
 }
 
 PanelPage.propTypes = {
