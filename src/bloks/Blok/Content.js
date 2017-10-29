@@ -41,7 +41,7 @@ const Content = (props) => {
       <Grid.Row>
         <Grid.Column width={8} textAlign='middle'>
           <Heading font='heading' size='h1' text={props.heading} className={blokContentHeadingClass} />
-          <Heading font='fancy' size='h4' text={props.kicker} className={blokContentKickerClass} />
+          <Heading font='fancy' size='h4' tag='h4' text={props.kicker} className={blokContentKickerClass} />
           {divider}
           {textData}
         </Grid.Column>
@@ -53,6 +53,7 @@ const Content = (props) => {
 Content.propTypes = {
   color: PropTypes.string,
   description: PropTypes.array,
+  divide: PropTypes.bool,
   heading: PropTypes.string,
   kicker: PropTypes.string,
   padded: PropTypes.bool
