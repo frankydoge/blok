@@ -8,6 +8,7 @@ const Content = (props) => {
   const {
     color,
     description,
+    divide,
     heading,
     kicker,
     padded
@@ -25,6 +26,9 @@ const Content = (props) => {
   var blokContentDescClass = cx ({
     'blok-content-description': true
   })
+  if (divide) {
+    var divider = <Line small />
+  }
   const textData = description.map((data, key) =>
     <Text
       key={key}
@@ -38,7 +42,7 @@ const Content = (props) => {
         <Grid.Column width={8} textAlign='middle'>
           <Heading font='heading' size='h1' text={props.heading} className={blokContentHeadingClass} />
           <Heading font='fancy' size='h4' text={props.kicker} className={blokContentKickerClass} />
-          <Line small />
+          {divider}
           {textData}
         </Grid.Column>
       </Grid.Row>
