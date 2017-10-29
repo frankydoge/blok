@@ -18,10 +18,9 @@
   - Font-Size
   - Text-Align
   - Color-Background
+  - Transparent
 
-- Bloks
-  - Blok
-    - Header
+- Elements
   - Grid
     - Container
     - Row
@@ -29,6 +28,11 @@
   - Heading
   - Line
   - Link
+  - Text
+
+- Blok
+  - Content
+  - Header
 
 ***********/
 
@@ -58,20 +62,24 @@ body {
 
 /* FONT-FAMILY */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Rock+Salt');
 
 .font-family-heading {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .font-family-body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+.font-family-fancy {
+  font-family: 'Rock Salt', cursive;
 }
 
 /* FONT-SIZE */
 
 .font-size-tiny {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .font-size-small {
@@ -87,7 +95,7 @@ body {
 }
 
 .font-size-huge {
-  font-size: 5rem;
+  font-size: 5.5rem;
 }
 
 /* TEXT-ALIGN */
@@ -140,9 +148,17 @@ body {
   border-color: #FFFFFF;
 }
 
+/* TRANSPARENT */
+
+.transparent {
+  opacity: 0.7;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+
 /********
 
-  BLOKS
+  ELEMENTS
 
 ********/
 
@@ -208,15 +224,16 @@ body {
 
 .line {
   height: 0.1rem;
-  width: 75%;
-  margin: 2rem auto;
+  width: 100vw;
+  margin: 5rem 0 0 -1rem;
   background-color: #000000;
 }
 
-@media all and (max-width: 900px) {
-  .line {
-    width: 100%;
-  }
+.line-small {
+  height: 0.1rem;
+  width: 50%;
+  margin: 2rem auto 0 auto;
+  background-color: #AAAAAA;
 }
 
 /* LINK */
@@ -236,15 +253,13 @@ body {
   color: inherit;
 }
 
-/*** 
+/********
+
   BLOK
-***/
+
+********/
 
 /* CONTENT */
-
-.blok-content {
-  padding-bottom: 4rem;
-}
 
 .blok-content-padded {
   padding-top: 7rem;
@@ -263,7 +278,7 @@ body {
 .blok-content-description {
   width: 90%;
   margin: 0 auto;
-  padding: 3rem 0.5rem 0 0.5rem;
+  padding: 3rem 0.5rem;
 }
 
 @media all and (max-width: 900px) {

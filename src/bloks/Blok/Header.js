@@ -8,13 +8,16 @@ const Header = (props) => {
   const {
     color,
     heading,
-    link
+    link,
+    raised,
+    transparent
   } = props
   var blokHeaderClass = cx ({
-    [`blok-header`]: true
+    'blok-header': true,
+    'transparent': transparent
   })
   var blokHeaderLinkClass = cx ({
-    [`blok-header-link`]: true
+    'blok-header-link': true
   })
   const linkData = link.map((data, key) =>
     <Link
@@ -25,10 +28,10 @@ const Header = (props) => {
     />
   )
   return (
-    <Grid color={color} raised className={blokHeaderClass}>
+    <Grid color={color} raised={raised} className={blokHeaderClass}>
       <Grid.Row>
         <Grid.Column width={2} textAlign='middle'>
-          <Heading font='body' size='regular' text={props.heading} />
+          <Heading font='heading' size='regular' text={props.heading} />
         </Grid.Column>
         <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
           {linkData}
@@ -41,13 +44,13 @@ const Header = (props) => {
 Header.propTypes = {
   color: PropTypes.string,
   heading: PropTypes.string,
-  link: PropTypes.array
+  link: PropTypes.array,
+  raised: PropTypes.bool
 }
 
 Header.defaultProps = {
   color: 'white',
-  heading: 'Title',
-  link: [{text: 'Link1', linkRef: '#', active: 'active'}]
+  heading: 'Title'
 }
 
 export default Header
