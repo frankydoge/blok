@@ -259,26 +259,21 @@ body {
   .column-8 { width: 100%; }
 }
 
-/* HEADING */
-
-.heading {
-  margin: 0;
-}
-
 /* LINE */
 
-.line {
+.line,
+.line-small {
   height: 0.1rem;
-  width: 100vw;
-  margin: 5rem 0 0 -1rem;
-  background-color: #000000;
+  margin: 2rem auto 0 auto;
+  background-color: #AAAAAA;
+}
+
+.line {
+  width: 100%;
 }
 
 .line-small {
-  height: 0.1rem;
-  width: 50%;
-  margin: 2rem auto 0 auto;
-  background-color: #AAAAAA;
+  width: 40%;
 }
 
 /* LINK */
