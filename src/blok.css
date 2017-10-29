@@ -276,6 +276,12 @@ body {
   width: 40%;
 }
 
+@media all and (max-width: 900px) {
+  .line-small {
+    width: 80%;
+  }
+}
+
 /* LINK */
 
 .link {
