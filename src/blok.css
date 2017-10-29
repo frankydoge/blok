@@ -153,6 +153,14 @@ body {
   text-align: justify;
 }
 
+@media all and (max-width: 900px) {
+  .text-align-right,
+  .text-align-left,
+  .text-align-justified {
+    text-align: center;
+  }
+}
+
 /* COLOR-BACKGROUND */
 
 .color-background-black {
@@ -347,12 +355,6 @@ body {
 
 .blok-header-link {
   margin-top: 0.7rem;
-}
-
-@media all and (max-width: 900px) {
-  .blok-header-link {
-    text-align: center;
-  }
 }
 
 /********** 
