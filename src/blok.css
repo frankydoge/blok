@@ -236,6 +236,10 @@ body {
 
 /* CONTENT */
 
+.blok-content {
+  padding-bottom: 4rem;
+}
+
 .blok-content-padded {
   padding-top: 7rem;
 }

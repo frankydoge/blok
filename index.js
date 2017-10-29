@@ -12,3 +12,6 @@ export { default as Line } from './lib/bloks/Line/Line'
 
 // LINK
 export { default as Link } from './lib/bloks/Link/Link'
+
+// Text
+export { default as Text } from './lib/bloks/Text/Text'

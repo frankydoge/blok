@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Heading, Line, Link } from '../../../index'
+import { Grid, Heading, Line, Link, Text } from '../../../index'
 import '../../blok.css'
 
 const Content = (props) => {
@@ -25,6 +25,13 @@ const Content = (props) => {
   var blokContentDescClass = cx ({
     'blok-content-description': true
   })
+  const textData = description.map((data, key) =>
+    <Text
+      key={key}
+      text={data.text}
+      className={blokContentDescClass}
+    />
+  )
   return (
     <Grid color={color} className={blokContentClass}>
       <Grid.Row>
@@ -33,7 +40,7 @@ const Content = (props) => {
           <Heading font='body' size='huge' text={props.heading} className={blokContentHeadingClass} />
           <Heading font='body' size='small' text={props.kicker} className={blokContentKickerClass} />
           <Line />
-          <Heading font='body' size='small' textAlign='left' text={props.description} className={blokContentDescClass} />
+          {textData}
         </Grid.Column>
         <Grid.Column width={1} />
       </Grid.Row>
@@ -43,7 +50,7 @@ const Content = (props) => {
 
 Content.propTypes = {
   color: PropTypes.string,
-  description: PropTypes.string,
+  description: PropTypes.array,
   heading: PropTypes.string,
   kicker: PropTypes.string,
   padded: PropTypes.bool
