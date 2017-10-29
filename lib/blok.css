@@ -208,9 +208,15 @@ body {
 
 .line {
   height: 0.1rem;
-  width: 90%;
+  width: 75%;
   margin: 2rem auto;
   background-color: #000000;
+}
+
+@media all and (max-width: 900px) {
+  .line {
+    width: 100%;
+  }
 }
 
 /* LINK */
@@ -258,6 +264,27 @@ body {
   width: 90%;
   margin: 0 auto;
   padding: 3rem 0.5rem 0 0.5rem;
+}
+
+@media all and (max-width: 900px) {
+  .blok-content {
+    padding-bottom: 1rem;
+  }
+
+  .blok-content-padded {
+    padding-top: 8.5rem;
+  }
+
+  .blok-content-kicker {
+    padding-bottom: 0.5rem;
+    width: 75%;
+  }
+
+  .blok-content-description {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0 0 0;
+  }
 }
 
 /* HEADER */
