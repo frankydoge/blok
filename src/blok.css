@@ -116,7 +116,7 @@ body {
   }
 
   .font-size-h4 {
-    line-height: 1.7rem;
+    line-height: 2rem;
   }
 
   .font-size-h3 {
@@ -306,19 +306,18 @@ body {
 }
 
 .blok-content-heading {
-  padding-top: 3rem;
+  padding-top: 1.5rem;
 }
 
 .blok-content-kicker {
   padding-top: 1.5rem;
-  width: 60%;
   margin: 0 auto;
 }
 
 .blok-content-description {
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
-  padding: 3rem 0.5rem;
+  padding: 2rem 0;
 }
 
 @media all and (max-width: 900px) {
@@ -327,18 +326,22 @@ body {
   }
 
   .blok-content-padded {
-    padding-top: 8.5rem;
+    padding-top: 10rem;
+  }
+
+  .blok-content-heading,
+  .blok-content-kicker,
+  .blok-content-description {
+    width: 95%;
+    margin: 1.5rem auto;
   }
 
   .blok-content-kicker {
     padding-bottom: 0.5rem;
-    width: 75%;
   }
 
   .blok-content-description {
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0 0 0;
+    padding: 1rem 0;
   }
 }
 
@@ -349,7 +352,13 @@ body {
 }
 
 .blok-header-link {
-  margin-top: 0.7rem;
+  margin-top: 2rem;
+}
+
+@media all and (max-width: 900px) {
+  .blok-header-link {
+    margin-top: 0;
+  }
 }
 
 /********** 
