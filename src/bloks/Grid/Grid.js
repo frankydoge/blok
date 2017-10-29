@@ -10,7 +10,6 @@ const Grid = (props) => {
     className,
     color,
     font,
-    id,
     raised,
     size,
     textAlign
@@ -25,7 +24,7 @@ const Grid = (props) => {
     [`text-align-${textAlign}`]: textAlign
   })
   return (
-    <div className={gridClass} id={props.id} >
+    <div className={gridClass} >
       {props.children}
     </div>
   )
@@ -35,7 +34,6 @@ Grid.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   font: PropTypes.string,
-  id: PropTypes.string,
   raised: PropTypes.bool,
   size: PropTypes.string,
   textAlign: PropTypes.string

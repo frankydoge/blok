@@ -45,6 +45,7 @@
 /* BASE */
 
 html {
+  /* font size is 62.5% so that 0.1rem = 1px */
   font-size: 62.5%;
   box-sizing: border-box;
 }
@@ -78,24 +79,60 @@ body {
 
 /* FONT-SIZE */
 
-.font-size-tiny {
-  font-size: 1.5rem;
+.font-size-text {
+  font-size: 1.6rem;
+  line-height: 2rem;
 }
 
-.font-size-small {
-  font-size: 2rem;
+.font-size-quote {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
 }
 
-.font-size-regular {
-  font-size: 3rem;
+.font-size-h4 {
+  font-size: 1.8rem;
+  line-height: 1.8rem;
 }
 
-.font-size-large {
-  font-size: 4rem;
+.font-size-h3 {
+  font-size: 2.8rem;
+  line-height: 2rem;
 }
 
-.font-size-huge {
-  font-size: 5.5rem;
+.font-size-h2 {
+  font-size: 3.6rem;
+  line-height: 2rem;
+}
+
+.font-size-h1 {
+  font-size: 4.8rem;
+  line-height: 1.6rem;
+}
+
+@media all and (max-width: 900px) {
+  .font-size-quote {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .font-size-h4 {
+    line-height: 1.7rem;
+  }
+
+  .font-size-h3 {
+    font-size: 2.2rem;
+    line-height: 1.9rem;
+  }
+
+  .font-size-h2 {
+    font-size: 2.6rem;
+    line-height: 1.9rem;
+  }
+
+  .font-size-h1 {
+    font-size: 3.2rem;
+    line-height: 2rem;
+  }
 }
 
 /* TEXT-ALIGN */

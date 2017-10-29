@@ -14,7 +14,7 @@ const Text = (props) => {
     [`${className}`]: className
   })
   return (
-    <Heading font='body' size='small' textAlign='middle' text={props.text} className={textClass} />
+    <Heading font='body' size='text' textAlign='middle' text={props.text} className={textClass} />
   )
 }
 
