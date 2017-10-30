@@ -1,47 +1,50 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Heading, Line, Link, Text } from '../../../index'
+import { Grid, Line, Link, Text } from '../../../index'
 import '../../blok.css'
 
 const Content = (props) => {
   const {
     color,
-    description,
     divide,
-    heading,
     kicker,
-    padded
+    padded,
+    text,
+    title
   } = props
   var blokContentClass = cx ({
     'blok-content': true,
     'blok-content-padded': padded
   })
-  var blokContentHeadingClass = cx ({
-    'blok-content-heading': true
+  var blokContentTitleClass = cx ({
+    'blok-content-title': true
   })
   var blokContentKickerClass = cx ({
     'blok-content-kicker': true
   })
-  var blokContentDescClass = cx ({
-    'blok-content-description': true
+  var blokContentTextClass = cx ({
+    'blok-content-text': true
   })
   if (divide) {
     var divider = <Line small />
   }
-  const textData = description.map((data, key) =>
+  const textData = text.map((data, key) =>
     <Text
       key={key}
       text={data.text}
-      className={blokContentDescClass}
+      className={blokContentTextClass}
+      font='body'
+      size='text'
+      tag='p'
     />
   )
   return (
     <Grid color={color} className={blokContentClass}>
       <Grid.Row>
         <Grid.Column width={8} textAlign='middle'>
-          <Heading font='heading' size='h1' text={props.heading} className={blokContentHeadingClass} />
-          <Heading font='fancy' size='h4' tag='h4' text={props.kicker} className={blokContentKickerClass} />
+          <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+          <Text font='fancy' size='h4' tag='h4' text={props.kicker} className={blokContentKickerClass} />
           {divider}
           {textData}
         </Grid.Column>
@@ -52,11 +55,11 @@ const Content = (props) => {
 
 Content.propTypes = {
   color: PropTypes.string,
-  description: PropTypes.array,
   divide: PropTypes.bool,
-  heading: PropTypes.string,
   kicker: PropTypes.string,
-  padded: PropTypes.bool
+  padded: PropTypes.bool,
+  text: PropTypes.array,
+  title: PropTypes.string
 }
 
 export default Content

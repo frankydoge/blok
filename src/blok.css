@@ -311,7 +311,7 @@ body {
   padding-top: 7rem;
 }
 
-.blok-content-heading {
+.blok-content-title {
   padding-top: 1.5rem;
 }
 
@@ -321,7 +321,7 @@ body {
   margin: 0 auto;
 }
 
-.blok-content-description {
+.blok-content-text {
   width: 85%;
   margin: 0 auto;
   padding: 2rem 0;
@@ -336,9 +336,9 @@ body {
     padding-top: 10rem;
   }
 
-  .blok-content-heading,
+  .blok-content-title,
   .blok-content-kicker,
-  .blok-content-description {
+  .blok-content-text {
     width: 95%;
     margin: 1.5rem auto;
   }
@@ -347,7 +347,7 @@ body {
     padding-bottom: 0.5rem;
   }
 
-  .blok-content-description {
+  .blok-content-text {
     padding: 1rem 0;
   }
 }

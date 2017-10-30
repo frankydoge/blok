@@ -1,15 +1,15 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Heading, Link } from '../../../index'
+import { Grid, Link, Text } from '../../../index'
 import '../../blok.css'
 
 const Header = (props) => {
   const {
     color,
-    heading,
     link,
     raised,
+    title,
     transparent
   } = props
   var blokHeaderClass = cx ({
@@ -31,7 +31,7 @@ const Header = (props) => {
     <Grid color={color} raised={raised} className={blokHeaderClass}>
       <Grid.Row>
         <Grid.Column width={2} textAlign='middle'>
-          <Heading font='heading' size='h3' text={props.heading} />
+          <Text font='heading' size='h3' text={props.title} />
         </Grid.Column>
         <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
           {linkData}
@@ -43,14 +43,15 @@ const Header = (props) => {
 
 Header.propTypes = {
   color: PropTypes.string,
-  heading: PropTypes.string,
   link: PropTypes.array,
-  raised: PropTypes.bool
+  raised: PropTypes.bool,
+  text: PropTypes.string,
+  transparent: PropTypes.bool
 }
 
 Header.defaultProps = {
   color: 'white',
-  heading: 'Title'
+  title: 'Title'
 }
 
 export default Header
