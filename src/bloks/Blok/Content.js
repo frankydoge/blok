@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Line, Link, Text } from '../../../index'
+import { Grid, Link, Text } from '../../../index'
 import '../../blok.css'
 
 const Content = (props) => {
@@ -26,9 +26,9 @@ const Content = (props) => {
   var blokContentTextClass = cx ({
     'blok-content-text': true
   })
-  if (divide) {
-    var divider = <Line small />
-  }
+  var blokContentDivideClass = cx ({
+    'blok-content-divide': divide
+  })
   const textData = text.map((data, key) =>
     <Text
       key={key}
@@ -42,10 +42,9 @@ const Content = (props) => {
   return (
     <Grid color={color} className={blokContentClass}>
       <Grid.Row>
-        <Grid.Column width={8} textAlign='middle'>
+        <Grid.Column width={8} textAlign='middle' className={blokContentDivideClass} >
           <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
           <Text font='fancy' size='h4' tag='h4' text={props.kicker} className={blokContentKickerClass} />
-          {divider}
           {textData}
         </Grid.Column>
       </Grid.Row>

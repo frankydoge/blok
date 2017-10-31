@@ -8,6 +8,7 @@ const Header = (props) => {
   const {
     color,
     link,
+    linkRef,
     raised,
     title,
     transparent
@@ -30,8 +31,8 @@ const Header = (props) => {
   return (
     <Grid color={color} raised={raised} className={blokHeaderClass}>
       <Grid.Row>
-        <Grid.Column width={2} textAlign='middle'>
-          <Text font='heading' size='h3' text={props.title} />
+        <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
+          <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
         </Grid.Column>
         <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
           {linkData}
@@ -44,6 +45,7 @@ const Header = (props) => {
 Header.propTypes = {
   color: PropTypes.string,
   link: PropTypes.array,
+  linkRef: PropTypes.string,
   raised: PropTypes.bool,
   title: PropTypes.string,
   transparent: PropTypes.bool
@@ -51,6 +53,7 @@ Header.propTypes = {
 
 Header.defaultProps = {
   color: 'white',
+  linkRef: '/',
   title: 'Title'
 }
 
