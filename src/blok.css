@@ -31,8 +31,9 @@
   - Text
 
 - Blok
-  - Content
   - Header
+  - Content
+  - Footer
 
 ***********/
 
@@ -196,9 +197,7 @@ body {
 /* TRANSPARENT */
 
 .transparent {
-  opacity: 0.7;
-  background-color: #000000;
-  color: #FFFFFF;
+  opacity: 0.9;
 }
 
 /********
@@ -305,6 +304,23 @@ body {
 
 ********/
 
+/* HEADER */
+
+.blok-header {
+  position: fixed;
+  /* Create blur behind in future*/
+}
+
+.blok-header-link {
+  margin-top: 2rem;
+}
+
+@media all and (max-width: 900px) {
+  .blok-header-link {
+    margin-top: 0;
+  }
+}
+
 /* CONTENT */
 
 .blok-content-padded {
@@ -352,19 +368,21 @@ body {
   }
 }
 
-/* HEADER */
+/* FOOTER */
 
-.blok-header {
-  position: fixed;
+.blok-footer {
+  min-height: 150px;
+  border-top: 0.1rem solid #AAAAAA; 
 }
 
-.blok-header-link {
+.blok-footer-link {
   margin-top: 2rem;
 }
 
 @media all and (max-width: 900px) {
-  .blok-header-link {
-    margin-top: 0;
+  .blok-footer-link .link {
+    display: block;
+    padding: 1.5rem;
   }
 }
 

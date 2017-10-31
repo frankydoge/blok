@@ -45,7 +45,7 @@ Header.propTypes = {
   color: PropTypes.string,
   link: PropTypes.array,
   raised: PropTypes.bool,
-  text: PropTypes.string,
+  title: PropTypes.string,
   transparent: PropTypes.bool
 }
 
