@@ -64,7 +64,7 @@ body {
 
 /* FONT-FAMILY */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Rock+Salt');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Zilla+Slab+Highlight:400,700|Pompiere');
 
 .font-family-heading {
   font-family: 'Montserrat', sans-serif;
@@ -74,8 +74,13 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.font-family-fancy {
-  font-family: 'Rock Salt', cursive;
+.font-family-secondary {
+  font-family: 'Pompiere', cursive;
+}
+
+.font-family-highlight {
+  font-family: 'Zilla Slab Highlight', cursive;
+  font-weight: 700;
 }
 
 /* FONT-SIZE */
