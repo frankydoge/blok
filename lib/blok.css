@@ -318,6 +318,7 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   margin: 0 auto;
+  color: #323232;
 }
 
 .blok-content-text {
@@ -327,7 +328,7 @@ body {
 }
 
 .blok-content-divide {
-  border-bottom: 0.1rem solid #AAAAAA; 
+  border-bottom: 0.1rem solid; 
 }
 
 @media all and (max-width: 900px) {
@@ -359,7 +360,7 @@ body {
 
 .blok-footer {
   min-height: 150px;
-  border-top: 0.1rem solid #AAAAAA; 
+  border-top: 0.1rem solid; 
 }
 
 .blok-footer-link {
