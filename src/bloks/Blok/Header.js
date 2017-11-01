@@ -20,26 +20,41 @@ const Header = (props) => {
   var blokHeaderLinkClass = cx ({
     'blok-header-link': true
   })
-  const linkData = link.map((data, key) =>
-    <Link
-      key={key}
-      text={data.text}
-      linkRef={data.linkRef}
-      active={data.active}
-    />
-  )
-  return (
-    <Grid color={color} raised={raised} className={blokHeaderClass}>
-      <Grid.Row>
-        <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
-          <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
-        </Grid.Column>
-        <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
-          {linkData}
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-  )
+  if (link) {
+    const linkData = link.map((data, key) =>
+      <Link
+        key={key}
+        text={data.text}
+        linkRef={data.linkRef}
+        active={data.active}
+      />
+    )
+    return (
+      <Grid color={color} raised={raised} className={blokHeaderClass}>
+        <Grid.Row>
+          <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
+            <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
+          </Grid.Column>
+          <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
+            {linkData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  } else {
+    return (
+      <Grid color={color} raised={raised} className={blokHeaderClass}>
+        <Grid.Row>
+          <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
+            <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
+          </Grid.Column>
+        </Grid.Row>
+        <Grid.Row>
+          {props.children}
+        </Grid.Row>
+      </Grid>
+    )
+  }
 }
 
 Header.propTypes = {
