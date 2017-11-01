@@ -40,8 +40,7 @@ Link.defaultProps = {
   active: false,
   font: 'body',
   linkRef: '#',
-  size: 'h4',
-  text: 'Link Text'
+  size: 'h4'
 }
 
 export default Link

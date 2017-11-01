@@ -37,7 +37,7 @@ Text.propTypes = {
 }
 
 Text.defaultProps = {
-  tag: 'h1'
+  tag: 'p'
 }
 
 export default Text
