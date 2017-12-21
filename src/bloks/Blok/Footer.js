@@ -29,10 +29,10 @@ const Footer = (props) => {
   return (
     <Grid color={color} className={blokFooterClass}>
       <Grid.Row>
-        <Grid.Column width={8} textAlign='middle' className={blokFooterLinkClass}>
+        <Grid.Column width={12} textAlign='middle' className={blokFooterLinkClass}>
           {linkData}
         </Grid.Column>
-        <Grid.Column width={8} textAlign='middle'>
+        <Grid.Column width={12} textAlign='middle'>
           <Text tag='p' font='body' size='text' text={text} />
         </Grid.Column>
       </Grid.Row>

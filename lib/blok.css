@@ -1,5 +1,5 @@
 /*
-* Blok - 0.3.0
+* Blok - 0.4.0
 * https://github.com/frankydoge/blok
 *
 * Copyright 2017, Justin Martin
@@ -219,7 +219,6 @@ body {
 
 .container {
   width: 100%;
-  margin: 0 auto;
 }
 
 .container-raised {
@@ -239,18 +238,22 @@ body {
 
 .column {
   float: left; 
-  width: 12.5%; 
+  width: 8.33%; 
   padding: 1rem;
 }
 
-.column-1 { width: 12.5%; }
-.column-2 { width: 25%; }
-.column-3 { width: 37.5%; }
-.column-4 { width: 50%; }
-.column-5 { width: 62.5%; }
-.column-6 { width: 75%; }
-.column-7 { width: 87.5%; }
-.column-8 { width: 100%; }
+.column-1 { width: 8.33%; }
+.column-2 { width: 16.66%; }
+.column-3 { width: 25%; }
+.column-4 { width: 33.33%; }
+.column-5 { width: 41.66%; }
+.column-6 { width: 50%; }
+.column-7 { width: 58.33%; }
+.column-8 { width: 66.66%; }
+.column-9 { width: 75%; }
+.column-10 { width: 83.33%; }
+.column-11 { width: 91.66%; }
+.column-12 { width: 100%; }
 
 @media all and (max-width: 900px) {
   .column { padding: 0; }
@@ -262,6 +265,10 @@ body {
   .column-6 { width: 100%; }
   .column-7 { width: 100%; }
   .column-8 { width: 100%; }
+  .column-9 { width: 100%; }
+  .column-10 { width: 100%; }
+  .column-11 { width: 100%; }
+  .column-12 { width: 100%; }
 }
 
 /* LINK */
@@ -377,55 +384,3 @@ body {
     padding: 1.5rem;
   }
 }
-
-/********** 
-*
-*   This will be added back in when side-panels are introduced
-*   but have removed this from the Blok.Header
-*
-***********
-
-.panel-side-left,
-.panel-side-right {
-  height: 100vh;
-}
-
-.panel-side-left {
-  box-shadow: 0.2rem 0 0.5rem grey;
-}
-
-.panel-side-right {
-  box-shadow: -0.2rem 0 0.5rem grey;
-}
-
-.panel-side-left .heading {
-  display: block;
-  margin: 1em 0.5em;
-}
-
-.panel-side-left .heading {
-  display: block;
-  margin: 1em -0.5em;
-}
-
-.panel-side-left .link,
-.panel-side-right .link {
-  display: block;
-  margin: 0 -0.5em;
-}
-
-.panel-side-left .link-active,
-.panel-side-right .link-active {
-  margin: 0 -1em;
-  border-bottom: none;
-}
-
-.panel-side-left .link-active {
-  border-right: 0.5em solid;
-}
-
-.panel-side-right .link-active {
-  border-left: 0.5em solid;
-}
-
-*/

@@ -32,10 +32,10 @@ const Header = (props) => {
     return (
       <Grid color={color} raised={raised} className={blokHeaderClass}>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
+          <Grid.Column width={3} textAlign='middle' className={blokHeaderLinkClass}>
             <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
           </Grid.Column>
-          <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
+          <Grid.Column width={9} textAlign='right' className={blokHeaderLinkClass}>
             {linkData}
           </Grid.Column>
         </Grid.Row>
@@ -45,7 +45,7 @@ const Header = (props) => {
     return (
       <Grid color={color} raised={raised} className={blokHeaderClass}>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
+          <Grid.Column width={3} textAlign='middle' className={blokHeaderLinkClass}>
             <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
           </Grid.Column>
         </Grid.Row>
