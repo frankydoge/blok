@@ -238,27 +238,27 @@ body {
 
 .column {
   float: left; 
-  width: 8.33%; 
+  width: 8.333%; 
   padding: 1rem;
 }
 
-.column-1 { width: 8.33%; }
-.column-2 { width: 16.66%; }
+.column-1 { width: 8.333%; }
+.column-2 { width: 16.666%; }
 .column-3 { width: 25%; }
-.column-4 { width: 33.33%; }
-.column-5 { width: 41.66%; }
+.column-4 { width: 33.333%; }
+.column-5 { width: 41.666%; }
 .column-6 { width: 50%; }
-.column-7 { width: 58.33%; }
-.column-8 { width: 66.66%; }
+.column-7 { width: 58.333%; }
+.column-8 { width: 66.666%; }
 .column-9 { width: 75%; }
-.column-10 { width: 83.33%; }
-.column-11 { width: 91.66%; }
+.column-10 { width: 83.333%; }
+.column-11 { width: 91.666%; }
 .column-12 { width: 100%; }
 
 @media all and (max-width: 900px) {
   .column { padding: 0; }
-  .column-1 { width: 50%; }
-  .column-2 { width: 100%; }
+  .column-1 { width: 25%; }
+  .column-2 { width: 50%; }
   .column-3 { width: 100%; }
   .column-4 { width: 100%; }
   .column-5 { width: 100%; }
