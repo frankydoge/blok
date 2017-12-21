@@ -19,7 +19,7 @@ const Text = (props) => {
     [`font-size-${size}`]: size,
     [`text-align-${textAlign}`]: textAlign
   })
-  const ElementTag = `${props.tag}`;
+  const ElementTag = `${props.tag}`
   return (
     <ElementTag className={textClass}>
       {props.text}

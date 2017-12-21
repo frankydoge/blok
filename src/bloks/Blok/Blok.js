@@ -7,11 +7,28 @@ import Footer from './Footer'
 import Header from './Header'
 
 const Blok = (props) => {
+  const {
+    className,
+    tag
+  } = props
+  var blokClass = cx ({
+    [`${className}`]: className
+  })
+  const ElementTag = `${props.tag}`
   return (
-    <div>
+    <ElementTag className={blokClass}>
       {props.children}
-    </div>
+    </ElementTag>
   )
+}
+
+Blok.propTypes = {
+  className: PropTypes.string,
+  tag: PropTypes.string
+}
+
+Blok.defaultProps = {
+  tag: 'div'
 }
 
 Blok.Content = Content

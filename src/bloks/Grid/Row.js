@@ -9,6 +9,7 @@ const Row = (props) => {
     color,
     font,
     size,
+    tag,
     textAlign
   } = props
   var rowClass = cx ({
@@ -19,10 +20,11 @@ const Row = (props) => {
     [`font-size-${size}`]: size,
     [`text-align-${textAlign}`]: textAlign
   })
+  const ElementTag = `${props.tag}`
   return (
-    <div className={rowClass}>
+    <ElementTag className={rowClass}>
       {props.children}
-    </div>
+    </ElementTag>
   )
 }
 
@@ -31,7 +33,12 @@ Row.propTypes = {
   color: PropTypes.string,
   font: PropTypes.string,
   size: PropTypes.string,
+  tag: PropTypes.string,
   textAlign: PropTypes.string
+}
+
+Row.defaultProps = {
+  tag: 'div'
 }
 
 export default Row

@@ -12,6 +12,7 @@ const Link = (props) => {
     font,
     linkRef,
     size,
+    tag,
     text
   } = props
   var linkClass = cx ({
@@ -22,8 +23,9 @@ const Link = (props) => {
     [`font-size-${size}`]: size,
     'link-active': active
   })
+  const ElementTag = `${props.tag}`
   return (
-    <a href={linkRef} className={linkClass}>{text}</a>
+    <ElementTag href={linkRef} className={linkClass}>{text}</ElementTag>
   )
 }
 
@@ -33,6 +35,7 @@ Link.propTypes = {
   font: PropTypes.string,
   linkRef: PropTypes.string,
   size: PropTypes.string,
+  tag: PropTypes.string,
   text: PropTypes.string
 }
 
@@ -40,7 +43,8 @@ Link.defaultProps = {
   active: false,
   font: 'body',
   linkRef: '#',
-  size: 'h4'
+  size: 'h4',
+  tag: 'a'
 }
 
 export default Link

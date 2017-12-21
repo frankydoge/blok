@@ -9,6 +9,7 @@ const Column = (props) => {
     color,
     font,
     size,
+    tag,
     textAlign,
     width
   } = props
@@ -21,10 +22,11 @@ const Column = (props) => {
     [`text-align-${textAlign}`]: textAlign,
     [`column-${width}`]: width
   })
+  const ElementTag = `${props.tag}`
   return (
-    <div className={columnClass} >
+    <ElementTag className={columnClass} >
       {props.children}
-    </div>
+    </ElementTag>
   )
 }
 
@@ -33,8 +35,13 @@ Column.propTypes = {
   color: PropTypes.string,
   font: PropTypes.string,
   size: PropTypes.string,
+  tag: PropTypes.string,
   textAlign: PropTypes.string,
   width: PropTypes.number
 }
 
+
+Column.defaultProps = {
+  tag: 'div'
+}
 export default Column

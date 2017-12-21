@@ -12,6 +12,7 @@ const Grid = (props) => {
     font,
     raised,
     size,
+    tag,
     textAlign
   } = props
   var gridClass = cx ({
@@ -23,10 +24,11 @@ const Grid = (props) => {
     [`font-size-${size}`]: size,
     [`text-align-${textAlign}`]: textAlign
   })
+  const ElementTag = `${props.tag}`
   return (
-    <div className={gridClass} >
+    <ElementTag className={gridClass} >
       {props.children}
-    </div>
+    </ElementTag>
   )
 }
 
@@ -36,7 +38,12 @@ Grid.propTypes = {
   font: PropTypes.string,
   raised: PropTypes.bool,
   size: PropTypes.string,
+  tag: PropTypes.string,
   textAlign: PropTypes.string
+}
+
+Grid.defaultProps = {
+  tag: 'div'
 }
 
 Grid.Row = Row
