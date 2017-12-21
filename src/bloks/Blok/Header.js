@@ -6,6 +6,7 @@ import '../../blok.css'
 
 const Header = (props) => {
   const {
+    children,
     color,
     link,
     linkRef,
@@ -58,6 +59,7 @@ const Header = (props) => {
 }
 
 Header.propTypes = {
+  children: PropTypes.node,
   color: PropTypes.string,
   link: PropTypes.array,
   linkRef: PropTypes.string,

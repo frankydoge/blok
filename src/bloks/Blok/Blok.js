@@ -8,6 +8,7 @@ import Header from './Header'
 
 const Blok = (props) => {
   const {
+    children,
     className,
     tag
   } = props
@@ -24,6 +25,7 @@ const Blok = (props) => {
 }
 
 Blok.propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   tag: PropTypes.string
 }
