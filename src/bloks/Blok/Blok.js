@@ -12,6 +12,7 @@ const Blok = (props) => {
     tag
   } = props
   var blokClass = cx ({
+    'blok': true,
     [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
