@@ -48,11 +48,11 @@ const Link = (props) => {
   } = props
   var linkClass = cx ({
     'link': true,
-    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
-    'link-active': active
+    'link-active': active,
+    [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
   return (

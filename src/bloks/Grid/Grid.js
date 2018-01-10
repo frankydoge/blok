@@ -48,12 +48,12 @@ const Grid = (props) => {
   } = props
   var gridClass = cx ({
     'container': true,
-    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     'container-raised': raised,
     [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
   return (

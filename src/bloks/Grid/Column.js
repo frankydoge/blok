@@ -16,6 +16,9 @@ Column.propTypes = {
   /* Set The Font Type */
   font: PropTypes.string,
 
+  /* Set The Column Offset Size */
+  offset: PropTypes.number,
+
   /* Set The Size Of The Font */
   size: PropTypes.string,
 
@@ -39,6 +42,7 @@ const Column = (props) => {
     className,
     color,
     font,
+    offset,
     size,
     tag,
     textAlign,
@@ -46,12 +50,13 @@ const Column = (props) => {
   } = props
   var columnClass = cx ({
     'column': true,
-    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
     [`text-align-${textAlign}`]: textAlign,
-    [`column-${width}`]: width
+    [`column-${width}`]: width,
+    [`column-offset-${offset}`]: offset,
+    [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
   return (

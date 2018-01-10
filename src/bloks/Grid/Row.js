@@ -42,11 +42,11 @@ const Row = (props) => {
   } = props
   var rowClass = cx ({
     'row': true,
-    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
   return (

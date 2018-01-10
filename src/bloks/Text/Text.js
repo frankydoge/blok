@@ -38,10 +38,10 @@ const Text = (props) => {
     textAlign
   } = props
   var textClass = cx ({
-    [`${className}`]: className,
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
   return (

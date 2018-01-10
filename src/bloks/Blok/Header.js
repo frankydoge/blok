@@ -62,11 +62,15 @@ const Header = (props) => {
     return (
       <Grid color={color} raised={raised} className={blokHeaderClass}>
         <Grid.Row>
-          <Grid.Column width={3} textAlign='middle' className={blokHeaderLinkClass}>
-            <Link size='h1' font='heading' text={props.title} linkRef={linkRef} active />
-          </Grid.Column>
-          <Grid.Column width={9} textAlign='right' className={blokHeaderLinkClass}>
-            {linkData}
+          <Grid.Column width={8} offset={2} >
+            <Grid.Row>
+              <Grid.Column width={3} className={blokHeaderLinkClass}>
+                <Link size='h1' font='heading' text={props.title} linkRef={linkRef} active />
+              </Grid.Column>
+              <Grid.Column width={9} textAlign='right' className={blokHeaderLinkClass}>
+                {linkData}
+              </Grid.Column>
+            </Grid.Row>
           </Grid.Column>
         </Grid.Row>
       </Grid>
