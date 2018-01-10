@@ -369,8 +369,8 @@ body {
 }
 
 .text-type-quote {
-  width: 90%;
-  margin: 0 auto;
+  width: 95%;
+  margin: 0 0 0 5%;
   padding: 1.5rem 0 1.5rem 2rem;
   background-color: #EFEFEF;
   border-left: #CCCCCC 1rem solid;
