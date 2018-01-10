@@ -362,6 +362,18 @@ body {
   color: inherit;
 }
 
+/* TEXT */
+
+.text-type-paragraph {
+  padding: 2rem 0;
+}
+
+.text-type-quote {
+  padding: 2rem;
+  background-color: #CCCCCC;
+  border-left: #DDDDDD 0.2rem solid;
+}
+
 /********
 
   BLOK
@@ -393,7 +405,7 @@ body {
 }
 
 .blok-content-title {
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
 .blok-content-kicker {
@@ -402,10 +414,6 @@ body {
   margin: 0 auto;
   color: #323232;
   font-weight: 300;
-}
-
-.blok-content-text {
-  padding: 2rem 0;
 }
 
 .blok-content-divide {

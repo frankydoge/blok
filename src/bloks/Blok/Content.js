@@ -11,7 +11,8 @@ const Content = (props) => {
     kicker,
     padded,
     text,
-    title
+    title,
+    type
   } = props
   var blokContentClass = cx ({
     'blok-content': true,
@@ -38,6 +39,7 @@ const Content = (props) => {
       size='text'
       tag='p'
       textAlign='left'
+      type={data.type}
     />
   )
   if (title && kicker) {
@@ -105,7 +107,14 @@ Content.propTypes = {
   text: PropTypes.array,
 
   /* Set The Content For The Title */
-  title: PropTypes.string
+  title: PropTypes.string,
+
+  /* Set The Text Type */
+  type: PropTypes.string
+}
+
+Content.defaultProps = {
+  type: 'paragraph'
 }
 
 export default Content

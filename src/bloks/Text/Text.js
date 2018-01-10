@@ -11,12 +11,14 @@ const Text = (props) => {
     size,
     tag,
     text,
-    textAlign
+    textAlign,
+    type
   } = props
   var textClass = cx ({
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
     [`text-align-${textAlign}`]: textAlign,
+    [`text-type-${type}`]: type,
     [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
@@ -44,11 +46,15 @@ Text.propTypes = {
   text: PropTypes.string,
 
   /* Set The Alignment Of The Text */
-  textAlign: PropTypes.string
+  textAlign: PropTypes.string,
+
+  /* Set The Text Type */
+  type: PropTypes.string
 }
 
 Text.defaultProps = {
-  tag: 'p'
+  tag: 'p',
+  type: 'paragraph'
 }
 
 export default Text
