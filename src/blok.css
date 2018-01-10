@@ -234,7 +234,7 @@ body {
 .column {
   float: left; 
   width: 8.333%; 
-  padding: 1rem;
+  padding: 0.75rem;
 }
 
 .column-1 { width: 8.333%; }
@@ -321,10 +321,6 @@ body {
   position: fixed;
   /* Create blur behind in future*/
   border-bottom: #CCCCCC 0.01rem solid;
-}
-
-.blok-header-link {
-  margin: 0.5rem 0;
 }
 
 @media all and (max-width: 900px) {
