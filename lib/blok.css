@@ -369,9 +369,11 @@ body {
 }
 
 .text-type-quote {
+  width: 90%;
+  margin: 0 auto;
   padding: 2rem;
-  background-color: #CCCCCC;
-  border-left: #DDDDDD 0.2rem solid;
+  background-color: #EEEEEE;
+  border-left: #BBBBBB 1rem solid;
 }
 
 /********
