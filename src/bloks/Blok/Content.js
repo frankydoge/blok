@@ -23,9 +23,6 @@ const Content = (props) => {
   var blokContentKickerClass = cx ({
     'blok-content-kicker': true
   })
-  var blokContentTextClass = cx ({
-    'blok-content-text': true
-  })
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
@@ -33,7 +30,6 @@ const Content = (props) => {
     <Text
       key={key}
       text={data.text}
-      className={blokContentTextClass}
       font='body'
       size='text'
       tag='p'
@@ -44,8 +40,8 @@ const Content = (props) => {
     <Grid color={color} className={blokContentClass}>
       <Grid.Row>
         <Grid.Column width={8} offset={2} textAlign='middle' className={blokContentDivideClass} >
-          <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
-          <Text font='heading' size='h3' tag='h2' textAlign='left' text={props.kicker} className={blokContentKickerClass} />
+          <Text font='heading' size='h1' textAlign='left' text={props.title} className={blokContentTitleClass} />
+          <Text font='secondary' size='h3' tag='h2' textAlign='left' text={props.kicker} className={blokContentKickerClass} />
           {textData}
         </Grid.Column>
       </Grid.Row>

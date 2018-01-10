@@ -64,7 +64,7 @@ body {
 
 /* FONT-FAMILY */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Pompiere');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Rubik:300,400');
 
 .font-family-heading {
   font-family: 'Montserrat', sans-serif;
@@ -75,7 +75,7 @@ body {
 }
 
 .font-family-secondary {
-  font-family: 'Pompiere', cursive;
+  font-family: 'Rubik', sans-serif;
 }
 
 /* FONT-SIZE */
@@ -344,12 +344,6 @@ body {
   padding-bottom: 1.5rem;
   margin: 0 auto;
   color: #323232;
-}
-
-.blok-content-text {
-  width: 85%;
-  margin: 0 auto;
-  padding: 2rem 0;
 }
 
 .blok-content-divide {
