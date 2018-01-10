@@ -23,6 +23,9 @@ const Content = (props) => {
   var blokContentKickerClass = cx ({
     'blok-content-kicker': true
   })
+  var blokContentTextClass = cx ({
+    'blok-content-text': true
+  })
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
@@ -30,23 +33,59 @@ const Content = (props) => {
     <Text
       key={key}
       text={data.text}
+      className={blokContentTextClass}
       font='body'
       size='text'
       tag='p'
       textAlign='left'
     />
   )
-  return (
-    <Grid color={color} className={blokContentClass}>
-      <Grid.Row>
-        <Grid.Column width={8} offset={2} textAlign='left' className={blokContentDivideClass} >
-          <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
-          <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
-          {textData}
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-  )
+  if (title && kicker) {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={8} offset={2} textAlign='left' className={blokContentDivideClass} >
+            <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+            <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  } else if (title) {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={8} offset={2} textAlign='left' className={blokContentDivideClass} >
+            <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  } else if (kicker) {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={8} offset={2} textAlign='left' className={blokContentDivideClass} >
+            <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  }
+  else {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={8} offset={2} textAlign='left' className={blokContentDivideClass} >
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  }
 }
 
 Content.propTypes = {
