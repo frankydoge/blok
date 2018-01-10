@@ -332,8 +332,8 @@ body {
 .column-offset-11 { margin-left: 91.666%; }
 
 @media all and (max-width: 900px) {
-  .column-offset-1 { margin-left: 25%; }
-  .column-offset-2 { margin-left: 50%; }
+  .column-offset-1 { margin-left: 0; }
+  .column-offset-2 { margin-left: 0; }
   .column-offset-3 { margin-left: 0; }
   .column-offset-4 { margin-left: 0; }
   .column-offset-5 { margin-left: 0; }
@@ -388,12 +388,8 @@ body {
 
 /* CONTENT */
 
-.blok-content {
-  margin-top: 0;
-}
-
 .blok-content-padded {
-  padding-top: 5.5rem;
+  padding-top: 7rem;
 }
 
 .blok-content-kicker {
@@ -402,6 +398,10 @@ body {
   margin: 0 auto;
   color: #323232;
   font-weight: 300;
+}
+
+.blok-content-text {
+  padding: 2rem 0;
 }
 
 .blok-content-divide {
