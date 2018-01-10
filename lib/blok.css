@@ -441,7 +441,7 @@ body {
 
 .blok-footer {
   min-height: 150px;
-  border-top: 0.1rem solid; 
+  border-top: #CCCCCC 0.01rem solid; 
 }
 
 .blok-footer-link {
