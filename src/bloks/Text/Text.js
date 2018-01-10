@@ -4,6 +4,29 @@ import cx from 'classnames'
 import { Heading } from '../../../index'
 import '../../blok.css'
 
+const Text = (props) => {
+  const {
+    className,
+    font,
+    size,
+    tag,
+    text,
+    textAlign
+  } = props
+  var textClass = cx ({
+    [`font-family-${font}`]: font,
+    [`font-size-${size}`]: size,
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
+  })
+  const ElementTag = `${props.tag}`
+  return (
+    <ElementTag className={textClass}>
+      {props.text}
+    </ElementTag>
+  )
+}
+
 Text.propTypes = {
   /* Add Custom Classes */
   className: PropTypes.string,
@@ -26,29 +49,6 @@ Text.propTypes = {
 
 Text.defaultProps = {
   tag: 'p'
-}
-
-const Text = (props) => {
-  const {
-    className,
-    font,
-    size,
-    tag,
-    text,
-    textAlign
-  } = props
-  var textClass = cx ({
-    [`font-family-${font}`]: font,
-    [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign,
-    [`${className}`]: className
-  })
-  const ElementTag = `${props.tag}`
-  return (
-    <ElementTag className={textClass}>
-      {props.text}
-    </ElementTag>
-  )
 }
 
 export default Text

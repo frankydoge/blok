@@ -4,35 +4,6 @@ import cx from 'classnames'
 import { Grid, Link, Text } from '../../../index'
 import '../../blok.css'
 
-Header.propTypes = {
-  /* Add Custom Content */
-  children: PropTypes.node,
-
-  /* Set The Color Scheme - REPLACE WITH THEME */
-  color: PropTypes.string,
-
-  /* Create The Header Navigation */
-  link: PropTypes.array,
-
-  /* Create The Link Location */
-  linkRef: PropTypes.string,
-
-  /* Add Shadow So Header 'Floats' */
-  raised: PropTypes.bool,
-
-  /* Set The Content For The Title */
-  title: PropTypes.string,
-
-  /* Set Transparency Of Background */
-  transparent: PropTypes.bool
-}
-
-Header.defaultProps = {
-  color: 'white',
-  linkRef: '/',
-  title: 'Title'
-}
-
 const Header = (props) => {
   const {
     children,
@@ -89,6 +60,35 @@ const Header = (props) => {
       </Grid>
     )
   }
+}
+
+Header.propTypes = {
+  /* Add Custom Content */
+  children: PropTypes.node,
+
+  /* Set The Color Scheme - REPLACE WITH THEME */
+  color: PropTypes.string,
+
+  /* Create The Header Navigation */
+  link: PropTypes.array,
+
+  /* Create The Link Location */
+  linkRef: PropTypes.string,
+
+  /* Add Shadow So Header 'Floats' */
+  raised: PropTypes.bool,
+
+  /* Set The Content For The Title */
+  title: PropTypes.string,
+
+  /* Set Transparency Of Background */
+  transparent: PropTypes.bool
+}
+
+Header.defaultProps = {
+  color: 'white',
+  linkRef: '/',
+  title: 'Title'
 }
 
 export default Header

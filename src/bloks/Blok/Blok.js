@@ -6,21 +6,6 @@ import Content from './Content'
 import Footer from './Footer'
 import Header from './Header'
 
-Blok.propTypes = {
-  /* Add Custom Content */
-  children: PropTypes.node,
-
-  /* Add Custom Classes */
-  className: PropTypes.string,
-
-  /* Set The Tag For The Element */
-  tag: PropTypes.string
-}
-
-Blok.defaultProps = {
-  tag: 'div'
-}
-
 const Blok = (props) => {
   const {
     children,
@@ -37,6 +22,21 @@ const Blok = (props) => {
       {props.children}
     </ElementTag>
   )
+}
+
+Blok.propTypes = {
+  /* Add Custom Content */
+  children: PropTypes.node,
+
+  /* Add Custom Classes */
+  className: PropTypes.string,
+
+  /* Set The Tag For The Element */
+  tag: PropTypes.string
+}
+
+Blok.defaultProps = {
+  tag: 'div'
 }
 
 Blok.Content = Content

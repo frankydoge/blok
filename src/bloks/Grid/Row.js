@@ -3,6 +3,32 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
 
+const Row = (props) => {
+  const {
+    children,
+    className,
+    color,
+    font,
+    size,
+    tag,
+    textAlign
+  } = props
+  var rowClass = cx ({
+    'row': true,
+    [`color-background-${color}`]: color,
+    [`font-family-${font}`]: font,
+    [`font-size-${size}`]: size,
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
+  })
+  const ElementTag = `${props.tag}`
+  return (
+    <ElementTag className={rowClass}>
+      {props.children}
+    </ElementTag>
+  )
+}
+
 Row.propTypes = {
   /* Add Custom Content */
   children: PropTypes.node,
@@ -28,32 +54,6 @@ Row.propTypes = {
 
 Row.defaultProps = {
   tag: 'div'
-}
-
-const Row = (props) => {
-  const {
-    children,
-    className,
-    color,
-    font,
-    size,
-    tag,
-    textAlign
-  } = props
-  var rowClass = cx ({
-    'row': true,
-    [`color-background-${color}`]: color,
-    [`font-family-${font}`]: font,
-    [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign,
-    [`${className}`]: className
-  })
-  const ElementTag = `${props.tag}`
-  return (
-    <ElementTag className={rowClass}>
-      {props.children}
-    </ElementTag>
-  )
 }
 
 export default Row

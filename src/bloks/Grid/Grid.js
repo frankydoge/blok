@@ -5,6 +5,34 @@ import '../../blok.css'
 import Column from './Column'
 import Row from './Row'
 
+const Grid = (props) => {
+  const {
+    children,
+    className,
+    color,
+    font,
+    raised,
+    size,
+    tag,
+    textAlign
+  } = props
+  var gridClass = cx ({
+    'container': true,
+    [`color-background-${color}`]: color,
+    [`font-family-${font}`]: font,
+    'container-raised': raised,
+    [`font-size-${size}`]: size,
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
+  })
+  const ElementTag = `${props.tag}`
+  return (
+    <ElementTag className={gridClass} >
+      {props.children}
+    </ElementTag>
+  )
+}
+
 Grid.propTypes = {
   /* Add Custom Content */
   children: PropTypes.node,
@@ -33,34 +61,6 @@ Grid.propTypes = {
 
 Grid.defaultProps = {
   tag: 'div'
-}
-
-const Grid = (props) => {
-  const {
-    children,
-    className,
-    color,
-    font,
-    raised,
-    size,
-    tag,
-    textAlign
-  } = props
-  var gridClass = cx ({
-    'container': true,
-    [`color-background-${color}`]: color,
-    [`font-family-${font}`]: font,
-    'container-raised': raised,
-    [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign,
-    [`${className}`]: className
-  })
-  const ElementTag = `${props.tag}`
-  return (
-    <ElementTag className={gridClass} >
-      {props.children}
-    </ElementTag>
-  )
 }
 
 Grid.Row = Row

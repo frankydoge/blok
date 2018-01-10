@@ -3,6 +3,36 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
 
+const Column = (props) => {
+  const {
+    children,
+    className,
+    color,
+    font,
+    offset,
+    size,
+    tag,
+    textAlign,
+    width
+  } = props
+  var columnClass = cx ({
+    'column': true,
+    [`color-background-${color}`]: color,
+    [`font-family-${font}`]: font,
+    [`font-size-${size}`]: size,
+    [`text-align-${textAlign}`]: textAlign,
+    [`column-${width}`]: width,
+    [`column-offset-${offset}`]: offset,
+    [`${className}`]: className
+  })
+  const ElementTag = `${props.tag}`
+  return (
+    <ElementTag className={columnClass} >
+      {props.children}
+    </ElementTag>
+  )
+}
+
 Column.propTypes = {
   /* Add Custom Content */
   children: PropTypes.node,
@@ -36,33 +66,4 @@ Column.defaultProps = {
   tag: 'div'
 }
 
-const Column = (props) => {
-  const {
-    children,
-    className,
-    color,
-    font,
-    offset,
-    size,
-    tag,
-    textAlign,
-    width
-  } = props
-  var columnClass = cx ({
-    'column': true,
-    [`color-background-${color}`]: color,
-    [`font-family-${font}`]: font,
-    [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign,
-    [`column-${width}`]: width,
-    [`column-offset-${offset}`]: offset,
-    [`${className}`]: className
-  })
-  const ElementTag = `${props.tag}`
-  return (
-    <ElementTag className={columnClass} >
-      {props.children}
-    </ElementTag>
-  )
-}
 export default Column
