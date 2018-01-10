@@ -3,6 +3,36 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
 
+Column.propTypes = {
+  /* Add Custom Content */
+  children: PropTypes.node,
+
+  /* Add Custom Classes */
+  className: PropTypes.string,
+
+  /* Set The Color Scheme - REPLACE WITH THEME */
+  color: PropTypes.string,
+
+  /* Set The Font Type */
+  font: PropTypes.string,
+
+  /* Set The Size Of The Font */
+  size: PropTypes.string,
+
+  /* Set The Tag For The Element */
+  tag: PropTypes.string,
+
+  /* Set The Alignment Of The Text */
+  textAlign: PropTypes.string,
+
+  /* Set The Column Width Size */
+  width: PropTypes.number
+}
+
+Column.defaultProps = {
+  tag: 'div'
+}
+
 const Column = (props) => {
   const {
     children,
@@ -29,21 +59,5 @@ const Column = (props) => {
       {props.children}
     </ElementTag>
   )
-}
-
-Column.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  color: PropTypes.string,
-  font: PropTypes.string,
-  size: PropTypes.string,
-  tag: PropTypes.string,
-  textAlign: PropTypes.string,
-  width: PropTypes.number
-}
-
-
-Column.defaultProps = {
-  tag: 'div'
 }
 export default Column

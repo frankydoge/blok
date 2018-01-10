@@ -4,6 +4,37 @@ import cx from 'classnames'
 import { Grid, Column } from '../../../index'
 import '../../blok.css'
 
+Link.propTypes = {
+  /* Set For Active Link */
+  active: PropTypes.bool,
+
+  /* Add Custom Classes */
+  className: PropTypes.string,
+
+  /* Set The Font Type */
+  font: PropTypes.string,
+
+  /* Create The Link Location */
+  linkRef: PropTypes.string,
+
+  /* Set The Size Of The Font */
+  size: PropTypes.string,
+
+  /* Set The Tag For The Element */
+  tag: PropTypes.string,
+
+  /* Set The Content For Text Message */
+  text: PropTypes.string
+}
+
+Link.defaultProps = {
+  active: false,
+  font: 'body',
+  linkRef: '#',
+  size: 'h4',
+  tag: 'a'
+}
+
 const Link = (props) => {
   const {
     active,
@@ -27,24 +58,6 @@ const Link = (props) => {
   return (
     <ElementTag href={linkRef} className={linkClass}>{text}</ElementTag>
   )
-}
-
-Link.propTypes = {
-  active: PropTypes.bool,
-  className: PropTypes.string,
-  font: PropTypes.string,
-  linkRef: PropTypes.string,
-  size: PropTypes.string,
-  tag: PropTypes.string,
-  text: PropTypes.string
-}
-
-Link.defaultProps = {
-  active: false,
-  font: 'body',
-  linkRef: '#',
-  size: 'h4',
-  tag: 'a'
 }
 
 export default Link

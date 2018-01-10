@@ -5,6 +5,36 @@ import '../../blok.css'
 import Column from './Column'
 import Row from './Row'
 
+Grid.propTypes = {
+  /* Add Custom Content */
+  children: PropTypes.node,
+
+  /* Add Custom Classes */
+  className: PropTypes.string,
+
+  /* Set The Color Scheme - REPLACE WITH THEME */
+  color: PropTypes.string,
+
+  /* Set The Font Type */
+  font: PropTypes.string,
+
+  /* Add Shadow So Grid 'Floats' */
+  raised: PropTypes.bool,
+
+  /* Set The Size Of The Font */
+  size: PropTypes.string,
+
+  /* Set The Tag For The Element */
+  tag: PropTypes.string,
+
+  /* Set The Alignment Of The Text */
+  textAlign: PropTypes.string
+}
+
+Grid.defaultProps = {
+  tag: 'div'
+}
+
 const Grid = (props) => {
   const {
     children,
@@ -31,21 +61,6 @@ const Grid = (props) => {
       {props.children}
     </ElementTag>
   )
-}
-
-Grid.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  color: PropTypes.string,
-  font: PropTypes.string,
-  raised: PropTypes.bool,
-  size: PropTypes.string,
-  tag: PropTypes.string,
-  textAlign: PropTypes.string
-}
-
-Grid.defaultProps = {
-  tag: 'div'
 }
 
 Grid.Row = Row
