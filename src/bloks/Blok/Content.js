@@ -39,9 +39,9 @@ const Content = (props) => {
   return (
     <Grid color={color} className={blokContentClass}>
       <Grid.Row>
-        <Grid.Column width={8} offset={2} textAlign='middle' className={blokContentDivideClass} >
-          <Text font='heading' size='h1' textAlign='left' text={props.title} className={blokContentTitleClass} />
-          <Text font='secondary' size='h3' tag='h2' textAlign='left' text={props.kicker} className={blokContentKickerClass} />
+        <Grid.Column width={8} offset={2} textAlign='left' className={blokContentDivideClass} >
+          <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+          <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
           {textData}
         </Grid.Column>
       </Grid.Row>
