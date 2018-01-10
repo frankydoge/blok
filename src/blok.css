@@ -64,7 +64,7 @@ body {
 
 /* FONT-FAMILY */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Zilla+Slab+Highlight:400,700|Pompiere');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Pompiere');
 
 .font-family-heading {
   font-family: 'Montserrat', sans-serif;
@@ -76,11 +76,6 @@ body {
 
 .font-family-secondary {
   font-family: 'Pompiere', cursive;
-}
-
-.font-family-highlight {
-  font-family: 'Zilla Slab Highlight', cursive;
-  font-weight: 700;
 }
 
 /* FONT-SIZE */
@@ -299,6 +294,7 @@ body {
 .blok-header {
   position: fixed;
   /* Create blur behind in future*/
+  border-bottom: #CCCCCC 0.01rem solid;
 }
 
 .blok-header-link {
@@ -335,7 +331,7 @@ body {
 }
 
 .blok-content-divide {
-  border-bottom: 0.1rem solid; 
+  border-bottom: #CCCCCC 0.01rem solid; 
 }
 
 @media all and (max-width: 900px) {
