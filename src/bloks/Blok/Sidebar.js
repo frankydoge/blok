@@ -2,30 +2,34 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
-import Content from './Content'
-import Footer from './Footer'
-import Header from './Header'
-import Sidebar from './Sidebar'
 
-const Blok = (props) => {
+const Sidebar = (props) => {
   const {
     children,
     className,
     tag
   } = props
-  var blokClass = cx ({
-    'blok': true,
+  var sidebarClass = cx ({
+    'sidebar': true,
     [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
+  const linkData = link.map((data, key) =>
+    <Link
+      key={key}
+      text={data.text}
+      linkRef={data.linkRef}
+      active={data.active}
+    />
+  )
   return (
-    <ElementTag className={blokClass}>
-      {props.children}
+    <ElementTag className={sidebarClass}>
+      {linkData}
     </ElementTag>
   )
 }
 
-Blok.propTypes = {
+Sidebar.propTypes = {
   /* Add Custom Content */
   children: PropTypes.node,
 
@@ -36,13 +40,8 @@ Blok.propTypes = {
   tag: PropTypes.string
 }
 
-Blok.defaultProps = {
+Sidebar.defaultProps = {
   tag: 'div'
 }
 
-Blok.Content = Content
-Blok.Footer = Footer
-Blok.Header = Header
-Blok.Sidebar = Sidebar
-
-export default Blok
+export default Sidebar
