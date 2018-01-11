@@ -43,7 +43,7 @@ Text.propTypes = {
   tag: PropTypes.string,
 
   /* Set The Content For Text Message */
-  text: PropTypes.element,
+  text: PropTypes.string,
 
   /* Set The Alignment Of The Text */
   textAlign: PropTypes.string,

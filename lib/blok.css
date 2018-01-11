@@ -360,6 +360,16 @@ body {
   padding: 2rem 0;
 }
 
+.text-type-inline {
+  padding: 2rem 0;
+  display: inline-block;
+}
+
+.text-type-inline-quote {
+  margin-left: 0.5rem;
+  background-color: #F7F4F4;
+}
+
 .text-type-quote {
   margin: 0 0 0 2.5%;
   padding: 1.5rem 0.5rem 1.5rem 2rem;
