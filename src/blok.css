@@ -356,19 +356,10 @@ body {
 
 /* TEXT */
 
+/* Need to add inline styles*/
+
 .text-type-paragraph {
   padding: 2rem 0;
-}
-
-.text-type-inline {
-  padding: 2rem 0;
-  display: inline-block;
-}
-
-.text-type-inline-quote {
-  margin-left: 0.5rem;
-  display: inline-block;
-  background-color: #F7F4F4;
 }
 
 .text-type-quote {
