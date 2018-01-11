@@ -31,9 +31,9 @@ const Content = (props) => {
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
-  const os = 0
+  var os = 0
   if (offset) {
-    const os = 3
+    os = 3
   }
   const textData = text.map((data, key) =>
     <Text
