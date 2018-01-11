@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Line, Link, Text } from '../../../index'
+import { Grid, Link, Text } from '../../../index'
 import '../../blok.css'
 
 const Footer = (props) => {
