@@ -8,6 +8,7 @@ const Sidebar = (props) => {
   const {
     children,
     className,
+    link,
     tag
   } = props
   var sidebarClass = cx ({
@@ -36,6 +37,9 @@ Sidebar.propTypes = {
 
   /* Add Custom Classes */
   className: PropTypes.string,
+
+  /* Create The Footer Navigation */
+  link: PropTypes.array,
 
   /* Set The Tag For The Element */
   tag: PropTypes.string
