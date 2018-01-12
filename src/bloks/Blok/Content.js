@@ -83,7 +83,9 @@ const Content = (props) => {
         </Grid.Row>
       </Grid>
     )
-  } else {
+  }
+
+  if (type == 'article') {
     return (
       <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
         {textData}
