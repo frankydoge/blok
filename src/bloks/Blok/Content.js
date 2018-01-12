@@ -9,7 +9,6 @@ const Content = (props) => {
     children,
     className,
     color,
-    container,
     divide,
     kicker,
     offset,
@@ -18,7 +17,8 @@ const Content = (props) => {
     textType,
     title,
     type,
-    width
+    width,
+    wrapper
   } = props
   var blokContentClass = cx ({
     'blok-content': true,
@@ -75,7 +75,7 @@ const Content = (props) => {
       return textData
     }
   }
-  if (container) {
+  if (wrapper) {
     return (
       <Grid color={color} className={blokContentClass}>
         <Grid.Row>
@@ -104,9 +104,6 @@ Content.propTypes = {
   /* Set The Color Scheme - REPLACE WITH THEME */
   color: PropTypes.string,
 
-  /* Add A Container to Contain Content */
-  container: PropTypes.bool,
-
   /* Add A Divider Line */
   divide: PropTypes.bool,
 
@@ -132,7 +129,10 @@ Content.propTypes = {
   type: PropTypes.string,
 
   /* Set The Width Of The Column */
-  width: PropTypes.number
+  width: PropTypes.number,
+
+  /* Set A Wrapper To Contain Content */
+  wrapper: PropTypes.bool
 }
 
 Content.defaultProps = {
