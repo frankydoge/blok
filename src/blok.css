@@ -358,6 +358,18 @@ body {
 
 /* Need to add inline styles*/
 
+.text-type-title {
+  padding: 4rem 0;
+}
+
+.text-type-sub {
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  margin: 0 auto;
+  color: #323232;
+  font-weight: 300;
+}
+
 .text-type-paragraph {
   padding: 2rem 0;
 }
@@ -367,6 +379,23 @@ body {
   padding: 1.5rem 0.5rem 1.5rem 2rem;
   background-color: #F7F4F4;
   border-left: #D8D8D8 1rem solid;
+}
+
+@media all and (max-width: 900px) {
+  .text-type-title,
+  .text-type-sub,
+  .text-type-paragraph {
+    width: 95%;
+    margin: 1.5rem auto;
+  }
+
+  .text-type-sub {
+    padding-bottom: 0.5rem;
+  }
+
+  .text-type-paragraph {
+    padding: 1rem 0;
+  }
 }
 
 /********
@@ -399,18 +428,6 @@ body {
   padding-top: 7rem;
 }
 
-.blok-content-title {
-  padding: 4rem 0;
-}
-
-.blok-content-kicker {
-  padding-top: 3rem;
-  padding-bottom: 1.5rem;
-  margin: 0 auto;
-  color: #323232;
-  font-weight: 300;
-}
-
 .blok-content-divide {
   border-bottom: #CCCCCC 0.01rem solid; 
 }
@@ -422,21 +439,6 @@ body {
 
   .blok-content-padded {
     padding-top: 8.5rem;
-  }
-
-  .blok-content-title,
-  .blok-content-kicker,
-  .blok-content-text {
-    width: 95%;
-    margin: 1.5rem auto;
-  }
-
-  .blok-content-kicker {
-    padding-bottom: 0.5rem;
-  }
-
-  .blok-content-text {
-    padding: 1rem 0;
   }
 }
 
