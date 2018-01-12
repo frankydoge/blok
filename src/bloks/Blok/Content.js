@@ -56,7 +56,7 @@ const Content = (props) => {
         type={data.textType}
       />
     })
-  } else {
+  } else if (textType == 'paragraph') {
     const textData = text.map((data, key) => {
       <Text
         key={key}
