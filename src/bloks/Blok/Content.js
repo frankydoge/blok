@@ -30,46 +30,42 @@ const Content = (props) => {
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
-  if (type == "article") {
-    const textData = text.map((data, key) => {
-      if (data.textType == 'title') {
-        <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='heading'
-          size='h1'
-          tag='h1'
-          textAlign='left'
-          type={data.textType}
-        />
-      } else if (data.textType == 'sub') {
-        <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='heading'
-          size='h3'
-          tag='h2'
-          textAlign='left'
-          type={data.textType}
-        />
-      } else {
-        <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='body'
-          size='text'
-          tag='p'
-          textAlign='left'
-          type={data.textType}
-        />
-      }
-    })
-  } else {
-    const textData = ''
-  }
+  const textData = text.map((data, key) => {
+    if (data.textType == 'title') {
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='heading'
+        size='h1'
+        tag='h1'
+        textAlign='left'
+        type={data.textType}
+      />
+    } else if (data.textType == 'sub') {
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='heading'
+        size='h3'
+        tag='h2'
+        textAlign='left'
+        type={data.textType}
+      />
+    } else {
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='body'
+        size='text'
+        tag='p'
+        textAlign='left'
+        type={data.textType}
+      />
+    }
+  })
   if (container) {
     return (
       <Grid color={color} className={blokContentClass}>
@@ -78,16 +74,10 @@ const Content = (props) => {
         </Grid.Row>
       </Grid>
     )
-  } else if (type == "article") {
-    return (
-      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        {textData}
-      </Grid.Column>
-    )
   } else {
     return (
       <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        No Content Type
+        {textData}
       </Grid.Column>
     )
   }
