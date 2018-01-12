@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
 import Column from './Column'
-import Container from './Container'
 import Row from './Row'
 
 const Grid = (props) => {
@@ -66,6 +65,5 @@ Grid.defaultProps = {
 
 Grid.Row = Row
 Grid.Column = Column
-Grid.Container = Container
 
 export default Grid
