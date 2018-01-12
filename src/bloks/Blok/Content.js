@@ -44,6 +44,7 @@ const Content = (props) => {
           type={data.textType}
         />
       })
+      return textData
     } else if (textType == 'sub') {
       const textData = text.map((data, key) => {
         <Text
@@ -57,6 +58,7 @@ const Content = (props) => {
           type={data.textType}
         />
       })
+      return textData
     } else {
       const textData = text.map((data, key) => {
         <Text
@@ -70,6 +72,7 @@ const Content = (props) => {
           type={data.textType}
         />
       })
+      return textData
     }
   }
   if (container) {
