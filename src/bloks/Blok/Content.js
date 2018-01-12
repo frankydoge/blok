@@ -33,7 +33,7 @@ const Content = (props) => {
   if (text) {
     const textData = text.map((data, key) => {
       if (data.textType == 'title') {
-        <Text
+        return <Text
           key={key}
           text={data.text}
           className={blokContentTextClass}
@@ -44,7 +44,7 @@ const Content = (props) => {
           type={data.textType}
         />
       } else if (data.textType == 'sub') {
-        <Text
+        return <Text
           key={key}
           text={data.text}
           className={blokContentTextClass}
@@ -55,7 +55,7 @@ const Content = (props) => {
           type={data.textType}
         />
       } else {
-        <Text
+        return <Text
           key={key}
           text={data.text}
           className={blokContentTextClass}
