@@ -67,6 +67,8 @@ const Content = (props) => {
         />
       }
     })
+  } else {
+    const textData = ''
   }
   if (container) {
     return (
