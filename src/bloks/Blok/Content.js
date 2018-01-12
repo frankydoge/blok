@@ -30,7 +30,7 @@ const Content = (props) => {
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
-  if (text) {
+  if (type == 'article') {
     if (textType == 'title') {
       const textData = text.map((data, key) => {
         <Text
