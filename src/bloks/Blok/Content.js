@@ -30,45 +30,47 @@ const Content = (props) => {
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
-  if (textType == 'title') {
-    const textData = text.map((data, key) => {
-      <Text
-        key={key}
-        text={data.text}
-        className={blokContentTextClass}
-        font='heading'
-        size='h1'
-        tag='h1'
-        textAlign='left'
-        type={data.textType}
-      />
-    })
-  } else if (textType == 'sub') {
-    const textData = text.map((data, key) => {
-      <Text
-        key={key}
-        text={data.text}
-        className={blokContentTextClass}
-        font='heading'
-        size='h3'
-        tag='h2'
-        textAlign='left'
-        type={data.textType}
-      />
-    })
-  } else if (textType == 'paragraph') {
-    const textData = text.map((data, key) => {
-      <Text
-        key={key}
-        text={data.text}
-        className={blokContentTextClass}
-        font='body'
-        size='text'
-        tag='p'
-        textAlign='left'
-        type={data.textType}
-      />
-    })
+  if (text) {
+    if (textType == 'title') {
+      const textData = text.map((data, key) => {
+        <Text
+          key={key}
+          text={data.text}
+          className={blokContentTextClass}
+          font='heading'
+          size='h1'
+          tag='h1'
+          textAlign='left'
+          type={data.textType}
+        />
+      })
+    } else if (textType == 'sub') {
+      const textData = text.map((data, key) => {
+        <Text
+          key={key}
+          text={data.text}
+          className={blokContentTextClass}
+          font='heading'
+          size='h3'
+          tag='h2'
+          textAlign='left'
+          type={data.textType}
+        />
+      })
+    } else {
+      const textData = text.map((data, key) => {
+        <Text
+          key={key}
+          text={data.text}
+          className={blokContentTextClass}
+          font='body'
+          size='text'
+          tag='p'
+          textAlign='left'
+          type={data.textType}
+        />
+      })
+    }
   }
   if (container) {
     return (
