@@ -30,42 +30,44 @@ const Content = (props) => {
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
-  if (text) {
+  if (data.textType == 'title') {
     const textData = text.map((data, key) => {
-      if (data.textType == 'title') {
-        return <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='heading'
-          size='h1'
-          tag='h1'
-          textAlign='left'
-          type={data.textType}
-        />
-      } else if (data.textType == 'sub') {
-        return <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='heading'
-          size='h3'
-          tag='h2'
-          textAlign='left'
-          type={data.textType}
-        />
-      } else {
-        return <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='body'
-          size='text'
-          tag='p'
-          textAlign='left'
-          type={data.textType}
-        />
-      }
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='heading'
+        size='h1'
+        tag='h1'
+        textAlign='left'
+        type={data.textType}
+      />
+    })
+  } else if (data.textType == 'sub') {
+    const textData = text.map((data, key) => {
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='heading'
+        size='h3'
+        tag='h2'
+        textAlign='left'
+        type={data.textType}
+      />
+    })
+  } else {
+    const textData = text.map((data, key) => {
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='body'
+        size='text'
+        tag='p'
+        textAlign='left'
+        type={data.textType}
+      />
     })
   }
   if (container) {
