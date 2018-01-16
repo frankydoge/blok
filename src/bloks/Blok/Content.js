@@ -46,17 +46,52 @@ const Content = (props) => {
       tag='p'
     />
   )
-  return (
-    <Grid color={color} className={blokContentClass}>
-      <Grid.Row>
-        <Grid.Column width={8} textAlign='middle' className={blokContentDivideClass} >
-          <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
-          <Text font='highlight' size='h3' tag='h3' text={props.kicker} className={blokContentKickerClass} />
-          {textData}
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-  )
+  if (title && kicker) {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+            <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+            <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  } else if (title) {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+            <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  } else if (kicker) {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+            <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  }
+  else {
+    return (
+      <Grid color={color} className={blokContentClass}>
+        <Grid.Row>
+          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+            {textData}
+          </Grid.Column>
+        </Grid.Row>
+      </Grid>
+    )
+  }
 }
 
 Content.propTypes = {
