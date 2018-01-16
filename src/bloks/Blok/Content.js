@@ -24,8 +24,14 @@ const Content = (props) => {
     'blok-content': true,
     'blok-content-padded': padded
   })
+  var blokContentTitleClass = cx ({
+    'blok-content-title': true
+  })
+  var blokContentKickerClass = cx ({
+    'blok-content-kicker': true
+  })
   var blokContentTextClass = cx ({
-    [`${className}`]: className
+    'blok-content-text': true
   })
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
