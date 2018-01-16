@@ -45,6 +45,7 @@ const Content = (props) => {
       size='text'
       tag='p'
       textAlign='left'
+      type={data.type}
     />
   )
   if (title && kicker) {
@@ -52,8 +53,8 @@ const Content = (props) => {
       <Grid color={color} className={blokContentClass}>
         <Grid.Row>
           <Grid.Column width={6} offset={offset} textAlign='left' className={blokContentDivideClass} >
-            <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
-            <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+            <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
+            <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
             {textData}
           </Grid.Column>
         </Grid.Row>
