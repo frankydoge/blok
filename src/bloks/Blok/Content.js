@@ -51,7 +51,7 @@ const Content = (props) => {
     return (
       <Grid color={color} className={blokContentClass}>
         <Grid.Row>
-          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+          <Grid.Column width={6} offset={offset} textAlign='left' className={blokContentDivideClass} >
             <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
             <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
             {textData}
@@ -63,7 +63,7 @@ const Content = (props) => {
     return (
       <Grid color={color} className={blokContentClass}>
         <Grid.Row>
-          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+          <Grid.Column width={6} offset={offset} textAlign='left' className={blokContentDivideClass} >
             <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
             {textData}
           </Grid.Column>
@@ -74,7 +74,7 @@ const Content = (props) => {
     return (
       <Grid color={color} className={blokContentClass}>
         <Grid.Row>
-          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+          <Grid.Column width={6} offset={offset} textAlign='left' className={blokContentDivideClass} >
             <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
             {textData}
           </Grid.Column>
@@ -86,7 +86,7 @@ const Content = (props) => {
     return (
       <Grid color={color} className={blokContentClass}>
         <Grid.Row>
-          <Grid.Column width={6} offset={os} textAlign='left' className={blokContentDivideClass} >
+          <Grid.Column width={6} offset={offset} textAlign='left' className={blokContentDivideClass} >
             {textData}
           </Grid.Column>
         </Grid.Row>
