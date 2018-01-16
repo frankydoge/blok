@@ -44,6 +44,7 @@ const Content = (props) => {
       font='body'
       size='text'
       tag='p'
+      textAlign='left'
     />
   )
   if (title && kicker) {
