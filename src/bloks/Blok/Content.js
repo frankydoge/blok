@@ -30,68 +30,27 @@ const Content = (props) => {
   var blokContentDivideClass = cx ({
     'blok-content-divide': divide
   })
-  if (type == 'article') {
-    if (textType == 'title') {
-      const textData = text.map((data, key) => {
-        <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='heading'
-          size='h1'
-          tag='h1'
-          textAlign='left'
-          type={data.textType}
-        />
-      })
-      return textData
-    } else if (textType == 'sub') {
-      const textData = text.map((data, key) => {
-        <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='heading'
-          size='h3'
-          tag='h2'
-          textAlign='left'
-          type={data.textType}
-        />
-      })
-      return textData
-    } else {
-      const textData = text.map((data, key) => {
-        <Text
-          key={key}
-          text={data.text}
-          className={blokContentTextClass}
-          font='body'
-          size='text'
-          tag='p'
-          textAlign='left'
-          type={data.textType}
-        />
-      })
-      return textData
-    }
-  }
-  if (wrapper) {
-    return (
-      <Grid color={color} className={blokContentClass}>
-        <Grid.Row>
-          {props.children}
-        </Grid.Row>
-      </Grid>
-    )
-  }
-
-  if (type == 'article') {
-    return (
-      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        {textData}
-      </Grid.Column>
-    )
-  }
+  const textData = text.map((data, key) =>
+    <Text
+      key={key}
+      text={data.text}
+      className={blokContentTextClass}
+      font='body'
+      size='text'
+      tag='p'
+    />
+  )
+  return (
+    <Grid color={color} className={blokContentClass}>
+      <Grid.Row>
+        <Grid.Column width={8} textAlign='middle' className={blokContentDivideClass} >
+          <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+          <Text font='highlight' size='h3' tag='h3' text={props.kicker} className={blokContentKickerClass} />
+          {textData}
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
+  )
 }
 
 Content.propTypes = {
@@ -133,10 +92,6 @@ Content.propTypes = {
 
   /* Set A Wrapper To Contain Content */
   wrapper: PropTypes.bool
-}
-
-Content.defaultProps = {
-  textType: 'paragraph'
 }
 
 export default Content
