@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Heading } from '../../../index'
 import '../../blok.css'
 
 /* Need to add ability to style words inline */

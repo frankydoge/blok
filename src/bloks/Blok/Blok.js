@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import '../../blok.css'
-import Content from './Content'
+import Article from './Article'
+import Container from './Container'
 import Footer from './Footer'
 import Header from './Header'
 import Sidebar from './Sidebar'
@@ -40,7 +41,8 @@ Blok.defaultProps = {
   tag: 'div'
 }
 
-Blok.Content = Content
+Blok.Article = Article
+Blok.Container = Container
 Blok.Footer = Footer
 Blok.Header = Header
 Blok.Sidebar = Sidebar

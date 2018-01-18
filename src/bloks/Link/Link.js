@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Column } from '../../../index'
+import { Grid, Column } from 'Components'
 import '../../blok.css'
 
 const Link = (props) => {
@@ -13,7 +13,8 @@ const Link = (props) => {
     linkRef,
     size,
     tag,
-    text
+    text,
+    type
   } = props
   var linkClass = cx ({
     'link': true,
@@ -21,6 +22,7 @@ const Link = (props) => {
     [`font-family-${font}`]: font,
     [`font-size-${size}`]: size,
     'link-active': active,
+    [`link-type-${type}`]: type,
     [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
@@ -49,7 +51,10 @@ Link.propTypes = {
   tag: PropTypes.string,
 
   /* Set The Content For Text Message */
-  text: PropTypes.string
+  text: PropTypes.string,
+
+  /* Set The Link Type */
+  type: PropTypes.string
 }
 
 Link.defaultProps = {

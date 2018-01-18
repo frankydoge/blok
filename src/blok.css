@@ -117,7 +117,7 @@ body {
 
 /* FONT-FAMILY */
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Rubik:300,400');
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto|Rubik:300,400|Source+Code+Pro');
 
 .font-family-heading {
   font-family: 'Montserrat', sans-serif;
@@ -342,7 +342,6 @@ body {
 .link {
   text-decoration: none;
   color: #CCCCCC;
-  padding: 0rem 2.5rem;
 }
 
 .link:hover {
@@ -354,12 +353,31 @@ body {
   color: inherit;
 }
 
+.link-type-title {
+  display: block;
+  padding: 1.5rem 0 1rem 0;
+  color: #000000;
+}
+
+.link-type-nav {
+  padding: 0 0.75rem;
+}
+
+.link-type-list {
+  display: block;
+  padding: 0.3rem 0;
+}
+
 /* TEXT */
 
 /* Need to add inline styles*/
 
 .text-type-title {
   padding: 4rem 0;
+}
+
+.text-type-title-small {
+  padding: 1rem 0;
 }
 
 .text-type-sub {
@@ -375,10 +393,17 @@ body {
 }
 
 .text-type-quote {
-  margin: 0 0 0 2.5%;
   padding: 1.5rem 0.5rem 1.5rem 2rem;
   background-color: #F7F4F4;
-  border-left: #D8D8D8 1rem solid;
+  border-left: #CCCCCC 1rem solid;
+}
+
+.text-type-code {
+  font-family: 'Source Code Pro', monospace;
+  padding: 1.5rem 0.5rem 1.5rem 2rem;
+  background-color: #323232;
+  color: #FFFFFF;
+  margin: 0.5rem 0;
 }
 
 @media all and (max-width: 900px) {
@@ -404,7 +429,7 @@ body {
 
 ********/
 
-/* HEADER */
+/* BLOK.HEADER */
 
 .blok-header {
   position: fixed;
@@ -422,27 +447,27 @@ body {
   }
 }
 
-/* CONTENT */
+/* BLOK.CONTAINER */
 
-.blok-content-padded {
+.blok-container-padded {
   padding-top: 7rem;
 }
 
-.blok-content-divide {
+.blok-container-divide {
   border-bottom: #CCCCCC 0.01rem solid; 
 }
 
 @media all and (max-width: 900px) {
-  .blok-content {
+  .blok-container {
     padding-bottom: 1rem;
   }
 
-  .blok-content-padded {
+  .blok-container-padded {
     padding-top: 8.5rem;
   }
 }
 
-/* FOOTER */
+/* BLOK.FOOTER */
 
 .blok-footer {
   min-height: 150px;
@@ -462,4 +487,8 @@ body {
     display: block;
     padding: 1.5rem;
   }
+}
+
+.blok-sidebar {
+  min-height: 70vh;
 }

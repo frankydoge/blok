@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Link, Text } from '../../../index'
+import { Grid, Link, Text } from 'Components'
 import '../../blok.css'
 
 const Footer = (props) => {
@@ -24,6 +24,7 @@ const Footer = (props) => {
       text={data.text}
       linkRef={data.linkRef}
       active={data.active}
+      type='nav'
     />
   )
   return (

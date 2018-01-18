@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Link } from '../../../index'
+import { Blok, Grid, Link, Text } from 'Components'
 import '../../blok.css'
 
 const Sidebar = (props) => {
@@ -9,9 +9,17 @@ const Sidebar = (props) => {
     children,
     className,
     link,
-    tag
+    offset,
+    tag,
+    title,
+    type,
+    width
   } = props
-  var sidebarClass = cx ({
+  var blokSidebarClass = cx ({
+    'blok-sidebar': true,
+    [`${className}`]: className
+  })
+  var blokSidebarTitleClass = cx ({
     'sidebar': true,
     [`${className}`]: className
   })
@@ -22,12 +30,22 @@ const Sidebar = (props) => {
       text={data.text}
       linkRef={data.linkRef}
       active={data.active}
+      type={data.type}
+      size='text'
+      className='blok-sidebar-link'
     />
   )
   return (
-    <ElementTag className={sidebarClass}>
-      {linkData}
-    </ElementTag>
+    <Grid.Column width={width} offset={offset} className={blokSidebarClass} >
+      <Blok.Container>
+        <Grid.Column width={12}>
+          <Text font='heading' type='title-small' size='h4' tag='h2' text={props.title} />
+        </Grid.Column>
+        <Grid.Column width={12}>
+          {linkData}
+        </Grid.Column>
+      </Blok.Container>
+    </Grid.Column>
   )
 }
 
@@ -41,12 +59,27 @@ Sidebar.propTypes = {
   /* Create The Footer Navigation */
   link: PropTypes.array,
 
+  /* Set if offset is needed */
+  offset: PropTypes.number,
+
   /* Set The Tag For The Element */
-  tag: PropTypes.string
+  tag: PropTypes.string,
+
+  /* Set The Content For The Title */
+  title: PropTypes.string,
+
+  /* Set The Link Type */
+  type: PropTypes.string,
+
+  /* Set The Width Of The Column */
+  width: PropTypes.number
 }
 
 Sidebar.defaultProps = {
-  tag: 'div'
+  offset: 2,
+  tag: 'div',
+  title: 'Website',
+  width: 2
 }
 
 export default Sidebar

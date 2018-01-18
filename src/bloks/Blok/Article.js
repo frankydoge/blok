@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Link, Text } from '../../../index'
+import { Grid, Link, Text } from 'Components'
 import '../../blok.css'
 
-const Content = (props) => {
+const Article = (props) => {
   const {
     children,
     className,
@@ -50,53 +50,37 @@ const Content = (props) => {
   )
   if (title && kicker) {
     return (
-      <Grid color={color} className={blokContentClass}>
-        <Grid.Row>
-          <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-            <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
-            <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
-            {textData}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
+        <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
+        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+        {textData}
+      </Grid.Column>
     )
   } else if (title) {
     return (
-      <Grid color={color} className={blokContentClass}>
-        <Grid.Row>
-          <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-            <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
-            {textData}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
+        <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+        {textData}
+      </Grid.Column>
     )
   } else if (kicker) {
     return (
-      <Grid color={color} className={blokContentClass}>
-        <Grid.Row>
-          <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-            <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
-            {textData}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
+        <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+        {textData}
+      </Grid.Column>
     )
   }
   else {
     return (
-      <Grid color={color} className={blokContentClass}>
-        <Grid.Row>
-          <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-            {textData}
-          </Grid.Column>
-        </Grid.Row>
-      </Grid>
+      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
+        {textData}
+      </Grid.Column>
     )
   }
 }
 
-Content.propTypes = {
+Article.propTypes = {
   /* Add Custom Content */
   children: PropTypes.node,
 
@@ -137,4 +121,8 @@ Content.propTypes = {
   wrapper: PropTypes.bool
 }
 
-export default Content
+Article.defaultProps = {
+  width: 12
+}
+
+export default Article
