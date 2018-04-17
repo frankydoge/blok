@@ -34,7 +34,7 @@ const Header = (props) => {
     return (
       <Grid color={color} raised={raised} className={blokHeaderClass}>
         <Grid.Row>
-          <Grid.Column width={8} offset={2} >
+          <Grid.Column width={10} offset={1} >
             <Grid.Row>
               <Grid.Column width={3} className={blokHeaderLinkClass}>
                 <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />

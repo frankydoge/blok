@@ -76,7 +76,7 @@ Sidebar.propTypes = {
 }
 
 Sidebar.defaultProps = {
-  offset: 2,
+  offset: 1,
   tag: 'div',
   title: 'Website',
   width: 2

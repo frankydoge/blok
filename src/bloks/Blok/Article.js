@@ -59,14 +59,14 @@ const Article = (props) => {
   } else if (title) {
     return (
       <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        <Text font='heading' size='h1' text={props.title} className={blokContentTitleClass} />
+        <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
         {textData}
       </Grid.Column>
     )
   } else if (kicker) {
     return (
       <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        <Text font='heading' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
         {textData}
       </Grid.Column>
     )

@@ -368,12 +368,22 @@ body {
   padding: 0.3rem 0;
 }
 
+@media all and (max-width: 900px) {
+  .link-type-title,
+  .link-type-nav,
+  .link-type-list {
+    display: block;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
+
 /* TEXT */
 
 /* Need to add inline styles*/
 
 .text-type-title {
-  padding: 4rem 0;
+  padding: 3rem 0;
 }
 
 .text-type-title-small {
@@ -389,7 +399,7 @@ body {
 }
 
 .text-type-paragraph {
-  padding: 2rem 0;
+  padding: 2rem 0 0.5rem 0;
 }
 
 .text-type-quote {
@@ -435,6 +445,10 @@ body {
   position: fixed;
   /* Create blur behind in future*/
   border-bottom: #CCCCCC 0.01rem solid;
+}
+
+.blok-header-link {
+  padding-left: 2rem;
 }
 
 @media all and (max-width: 900px) {
