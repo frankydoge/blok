@@ -21,6 +21,13 @@ const Header = (props) => {
   var blokHeaderLinkClass = cx ({
     'blok-header-link': true
   })
+  var blokHeaderTitleClass = cx ({
+    'blok-header-title': true
+  })
+  var blokHeaderNavClass = cx ({
+    'blok-header-link': true,
+    'blok-header-nav': true
+  })
   if (link) {
     const linkData = link.map((data, key) =>
       <Link
@@ -37,9 +44,9 @@ const Header = (props) => {
           <Grid.Column width={10} offset={1} >
             <Grid.Row>
               <Grid.Column width={3} className={blokHeaderLinkClass}>
-                <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
+                <Link size='h3' font='heading' text={props.title} linkRef={linkRef} className={blokHeaderTitleClass} active />
               </Grid.Column>
-              <Grid.Column width={9} textAlign='right' className={blokHeaderLinkClass}>
+              <Grid.Column width={9} textAlign='right' className={blokHeaderNavClass}>
                 {linkData}
               </Grid.Column>
             </Grid.Row>

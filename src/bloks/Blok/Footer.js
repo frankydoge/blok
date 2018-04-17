@@ -16,7 +16,8 @@ const Footer = (props) => {
     'transparent': transparent
   })
   var blokFooterLinkClass = cx ({
-    'blok-footer-link': true
+    'blok-footer-link': true,
+    'blok-footer-nav': true
   })
   const linkData = link.map((data, key) =>
     <Link
