@@ -504,6 +504,10 @@ body {
     border-bottom: #CCCCCC 0.01rem solid;
   }
 
+  .blok-sidebar-title {
+    text-align: center;
+  }
+
   .blok-sidebar-link {
     display: inline-block;
     min-width: 33%;
