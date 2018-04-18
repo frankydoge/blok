@@ -160,7 +160,7 @@ body {
 
 .font-size-h1 {
   font-size: 4.8rem;
-  line-height: 1.6rem;
+  line-height: 4.3rem;
 }
 
 @media all and (max-width: 900px) {
@@ -425,11 +425,12 @@ body {
   .text-type-sub,
   .text-type-paragraph {
     width: 95%;
-    margin: 1.5rem auto;
+    margin: 1rem auto;
   }
 
+  .text-type-title,
   .text-type-sub {
-    padding-bottom: 0.5rem;
+    padding: 1.5rem 0;
   }
 
   .text-type-paragraph {
@@ -524,7 +525,8 @@ body {
 
 .blok-footer {
   min-height: 150px;
-  border-top: #CCCCCC 0.01rem solid; 
+  border-top: #CCCCCC 0.01rem solid;
+  margin-top: 1.5rem;
 }
 
 .blok-footer-link {
