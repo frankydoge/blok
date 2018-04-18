@@ -26,14 +26,14 @@
     - Container
     - Row
     - Column
-  - Heading
-  - Line
   - Link
   - Text
 
 - Blok
   - Header
-  - Content
+  - Container
+  - Article
+  - Sidebar
   - Footer
 
 ***********/
@@ -495,6 +495,31 @@ body {
   }
 }
 
+/* BLOK.ARTICLE */
+
+/* BLOK.SIDEBAR */
+
+@media all and (max-width: 900px) {
+  .blok-sidebar {
+    border-bottom: #CCCCCC 0.01rem solid;
+  }
+
+  .blok-sidebar-title {
+    display: none;
+  }
+
+  .blok-sidebar-link {
+    display: inline-block;
+    min-width: 33%;
+    padding: 1.25rem;
+  }
+
+  .blok-sidebar-link.link-type-title {
+    display: inline-block;
+    width: 100%;
+  }
+}
+
 /* BLOK.FOOTER */
 
 .blok-footer {
@@ -514,15 +539,5 @@ body {
   .blok-footer-nav {
     display: block;
     text-align: center;
-  }
-}
-
-.blok-sidebar {
-  min-height: 70vh;
-}
-
-@media all and (max-width: 900px) {
-  .blok-sidebar {
-    min-height: 15vh;
   }
 }

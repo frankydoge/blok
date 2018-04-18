@@ -20,7 +20,7 @@ const Sidebar = (props) => {
     [`${className}`]: className
   })
   var blokSidebarTitleClass = cx ({
-    'sidebar': true,
+    'blok-sidebar-title': true,
     [`${className}`]: className
   })
   const ElementTag = `${props.tag}`
@@ -39,7 +39,7 @@ const Sidebar = (props) => {
     <Grid.Column width={width} offset={offset} className={blokSidebarClass} >
       <Blok.Container>
         <Grid.Column width={12}>
-          <Text font='heading' type='title-small' size='h4' tag='h2' text={props.title} />
+          <Text font='heading' type='title-small' size='h4' tag='h2' text={props.title} className={blokSidebarTitleClass} />
         </Grid.Column>
         <Grid.Column width={12}>
           {linkData}
