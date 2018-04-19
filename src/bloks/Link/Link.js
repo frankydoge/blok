@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Column } from 'Components'
 import '../../blok.css'
 
 const Link = (props) => {

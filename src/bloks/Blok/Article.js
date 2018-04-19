@@ -54,6 +54,7 @@ const Article = (props) => {
         <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
         <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
         {textData}
+        {props.children}
       </Grid.Column>
     )
   } else if (title) {
@@ -61,6 +62,7 @@ const Article = (props) => {
       <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
         <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
         {textData}
+        {props.children}
       </Grid.Column>
     )
   } else if (kicker) {
@@ -68,6 +70,7 @@ const Article = (props) => {
       <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
         <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
         {textData}
+        {props.children}
       </Grid.Column>
     )
   }
