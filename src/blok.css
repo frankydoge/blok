@@ -453,6 +453,10 @@ body {
   margin: 0.5rem 0 0 0;
 }
 
+.text-type-code-block {
+  padding-top: 0;
+}
+
 @media all and (max-width: 900px) {
   .text-type-title,
   .text-type-sub,
