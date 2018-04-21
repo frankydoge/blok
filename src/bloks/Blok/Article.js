@@ -7,7 +7,6 @@ import '../../blok.css'
 const Article = (props) => {
   const {
     children,
-    className,
     color,
     divide,
     kicker,
@@ -20,64 +19,120 @@ const Article = (props) => {
     width,
     wrapper
   } = props
-  var blokContentClass = cx ({
-    'blok-content': true,
-    'blok-content-padded': padded
-  })
-  var blokContentTitleClass = cx ({
-    'blok-content-title': true
-  })
-  var blokContentKickerClass = cx ({
-    'blok-content-kicker': true
-  })
   var blokContentTextClass = cx ({
-    'blok-content-text': true
+    'blok-content-text': true,
+    'blok-content-text-padded': padded
   })
-  var blokContentDivideClass = cx ({
-    'blok-content-divide': divide
-  })
-  const textData = text.map((data, key) =>
-    <Text
-      key={key}
-      text={data.text}
-      className={blokContentTextClass}
-      font='body'
-      size='text'
-      tag='p'
-      textAlign='left'
-      type={data.type}
-    />
-  )
-  if (title && kicker) {
+  if (title && kicker && text) {
+    const textData = text.map((data, key) =>
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='body'
+        size='text'
+        tag='p'
+        textAlign='left'
+        type={data.type}
+        padded={props.padded}
+      />
+    )
     return (
-      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
-        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        <Text font='heading' type='title' size='h1' text={props.title} />
+        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} />
+        {textData}
+        {props.children}
+      </Grid.Column>
+    )
+  } else if (title && kicker) {
+    return (
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        <Text font='heading' type='title' size='h1' text={props.title} />
+        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} />
+        {props.children}
+      </Grid.Column>
+    )
+  } else if (title && text) {
+    const textData = text.map((data, key) =>
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='body'
+        size='text'
+        tag='p'
+        textAlign='left'
+        type={data.type}
+        padded={props.padded}
+      />
+    )
+    return (
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        <Text font='heading' type='title' size='h1' text={props.title} />
         {textData}
         {props.children}
       </Grid.Column>
     )
   } else if (title) {
     return (
-      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        <Text font='heading' type='title' size='h1' text={props.title} className={blokContentTitleClass} />
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        <Text font='heading' type='title' size='h1' text={props.title} />
+        {props.children}
+      </Grid.Column>
+    )
+  } else if (kicker && text) {
+    const textData = text.map((data, key) =>
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='body'
+        size='text'
+        tag='p'
+        textAlign='left'
+        type={data.type}
+        padded={props.padded}
+      />
+    )
+    return (
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} />
         {textData}
         {props.children}
       </Grid.Column>
     )
   } else if (kicker) {
     return (
-      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} className={blokContentKickerClass} />
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        <Text font='heading' type='sub' size='h3' tag='h2' text={props.kicker} />
+        {props.children}
+      </Grid.Column>
+    )
+  } else if (text) {
+    const textData = text.map((data, key) =>
+      <Text
+        key={key}
+        text={data.text}
+        className={blokContentTextClass}
+        font='body'
+        size='text'
+        tag='p'
+        textAlign='left'
+        type={data.type}
+        padded={props.padded}
+      />
+    )
+    return (
+      <Grid.Column width={width} offset={offset} textAlign='left' >
         {textData}
         {props.children}
       </Grid.Column>
     )
-  }
-  else {
+  } else {
     return (
-      <Grid.Column width={width} offset={offset} textAlign='left' className={blokContentDivideClass} >
-        {textData}
+      <Grid.Column width={width} offset={offset} textAlign='left' >
+        {props.children}
       </Grid.Column>
     )
   }
@@ -86,9 +141,6 @@ const Article = (props) => {
 Article.propTypes = {
   /* Add Custom Content */
   children: PropTypes.node,
-
-  /* Add Custom Classes */
-  className: PropTypes.string,
 
   /* Set The Color Scheme - REPLACE WITH THEME */
   color: PropTypes.string,

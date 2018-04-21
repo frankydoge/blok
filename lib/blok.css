@@ -441,12 +441,16 @@ body {
   border-left: #CCCCCC 1rem solid;
 }
 
-.text-type-code {
+.text-type-code,
+.text-type-code-block {
   font-family: 'Source Code Pro', monospace;
-  padding: 1.5rem 0.5rem 1.5rem 2rem;
+  padding: 1rem 0.5rem 1.5rem 2rem;
   background-color: #323232;
   color: #FFFFFF;
-  margin: 0.5rem 0;
+}
+
+.text-type-code {
+  margin: 0.5rem 0 0 0;
 }
 
 @media all and (max-width: 900px) {
