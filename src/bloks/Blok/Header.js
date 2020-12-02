@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { Grid, Link, Text } from '../../../index'
+import { Grid, Link, Text } from 'Components'
 import '../../blok.css'
 
 const Header = (props) => {
   const {
+    children,
     color,
     link,
     linkRef,
@@ -20,6 +21,13 @@ const Header = (props) => {
   var blokHeaderLinkClass = cx ({
     'blok-header-link': true
   })
+  var blokHeaderTitleClass = cx ({
+    'blok-header-title': true
+  })
+  var blokHeaderNavClass = cx ({
+    'blok-header-link': true,
+    'blok-header-nav': true
+  })
   if (link) {
     const linkData = link.map((data, key) =>
       <Link
@@ -27,16 +35,21 @@ const Header = (props) => {
         text={data.text}
         linkRef={data.linkRef}
         active={data.active}
+        type='nav'
       />
     )
     return (
       <Grid color={color} raised={raised} className={blokHeaderClass}>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
-            <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
-          </Grid.Column>
-          <Grid.Column width={6} textAlign='right' className={blokHeaderLinkClass}>
-            {linkData}
+          <Grid.Column width={10} offset={1} >
+            <Grid.Row>
+              <Grid.Column width={3} className={blokHeaderLinkClass}>
+                <Link size='h3' font='heading' text={props.title} linkRef={linkRef} className={blokHeaderTitleClass} active />
+              </Grid.Column>
+              <Grid.Column width={9} textAlign='right' className={blokHeaderNavClass}>
+                {linkData}
+              </Grid.Column>
+            </Grid.Row>
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -45,8 +58,8 @@ const Header = (props) => {
     return (
       <Grid color={color} raised={raised} className={blokHeaderClass}>
         <Grid.Row>
-          <Grid.Column width={2} textAlign='middle' className={blokHeaderLinkClass}>
-            <Link size='h3' font='heading' text={props.title} linkRef={linkRef} active />
+          <Grid.Column width={3} textAlign='middle' className={blokHeaderLinkClass}>
+            <Link size='h1' font='heading' text={props.title} linkRef={linkRef} active />
           </Grid.Column>
         </Grid.Row>
         <Grid.Row>
@@ -58,11 +71,25 @@ const Header = (props) => {
 }
 
 Header.propTypes = {
+  /* Add Custom Content */
+  children: PropTypes.node,
+
+  /* Set The Color Scheme - REPLACE WITH THEME */
   color: PropTypes.string,
+
+  /* Create The Header Navigation */
   link: PropTypes.array,
+
+  /* Create The Link Location */
   linkRef: PropTypes.string,
+
+  /* Add Shadow So Header 'Floats' */
   raised: PropTypes.bool,
+
+  /* Set The Content For The Title */
   title: PropTypes.string,
+
+  /* Set Transparency Of Background */
   transparent: PropTypes.bool
 }
 
