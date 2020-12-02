@@ -7,5 +7,8 @@ export { default as Grid } from './lib/bloks/Grid/Grid'
 // LINK
 export { default as Link } from './lib/bloks/Link/Link'
 
+// TABLE
+export { default as Table } from './lib/bloks/Table/Table'
+
 // TEXT
 export { default as Text } from './lib/bloks/Text/Text'

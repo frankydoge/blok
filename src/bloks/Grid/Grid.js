@@ -7,36 +7,60 @@ import Row from './Row'
 
 const Grid = (props) => {
   const {
+    children,
     className,
     color,
     font,
     raised,
     size,
+    tag,
     textAlign
   } = props
   var gridClass = cx ({
     'container': true,
-    [`${className}`]: className,
     [`color-background-${color}`]: color,
     [`font-family-${font}`]: font,
     'container-raised': raised,
     [`font-size-${size}`]: size,
-    [`text-align-${textAlign}`]: textAlign
+    [`text-align-${textAlign}`]: textAlign,
+    [`${className}`]: className
   })
+  const ElementTag = `${props.tag}`
   return (
-    <div className={gridClass} >
+    <ElementTag className={gridClass} >
       {props.children}
-    </div>
+    </ElementTag>
   )
 }
 
 Grid.propTypes = {
+  /* Add Custom Content */
+  children: PropTypes.node,
+
+  /* Add Custom Classes */
   className: PropTypes.string,
+
+  /* Set The Color Scheme - REPLACE WITH THEME */
   color: PropTypes.string,
+
+  /* Set The Font Type */
   font: PropTypes.string,
+
+  /* Add Shadow So Grid 'Floats' */
   raised: PropTypes.bool,
+
+  /* Set The Size Of The Font */
   size: PropTypes.string,
+
+  /* Set The Tag For The Element */
+  tag: PropTypes.string,
+
+  /* Set The Alignment Of The Text */
   textAlign: PropTypes.string
+}
+
+Grid.defaultProps = {
+  tag: 'div'
 }
 
 Grid.Row = Row
